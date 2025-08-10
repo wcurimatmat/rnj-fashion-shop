@@ -4,7 +4,7 @@ function AppLogo() {
     return (
         <figure className="aspect-square overflow-hidden">
             <a href="">
-                <img src={Logo} alt="" className="w-14 object-cover" />
+                <img src={Logo} alt="" className="w-16 object-cover" />
             </a>
         </figure>
     );
