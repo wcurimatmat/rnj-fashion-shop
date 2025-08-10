@@ -13,7 +13,7 @@ function Header() {
     return (
         <>
             <header>
-                <div className="flex items-center justify-between px-4 py-5">
+                <div className="m-auto flex items-center justify-between px-4 py-8 transition ease-in-out md:px-16 lg:max-w-[1440px] lg:px-24">
                     <button
                         className="flex-1 cursor-pointer md:hidden"
                         onClick={handleSetNavState}
@@ -28,9 +28,11 @@ function Header() {
                     <div className="flex flex-1 justify-end">
                         <a
                             href=""
-                            className="rounded-sm bg-rose-400 px-4 py-2 font-bold text-gray-100 transition duration-200 ease-in-out hover:bg-rose-300"
+                            className="rounded-sm bg-rose-400 transition duration-200 ease-in-out hover:bg-rose-300"
                         >
-                            Login
+                            <p className="px-4 py-2 font-bold text-gray-100 md:px-6 md:py-3">
+                                Login
+                            </p>
                         </a>
                     </div>
                 </div>
