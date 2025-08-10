@@ -12,7 +12,7 @@ function Nav({ navState }) {
                             <li key={index} className="py-4">
                                 <a
                                     href={item.url}
-                                    className="font-quattrocento text-xl md:text-base"
+                                    className="font-quattrocento text-md md:text-base"
                                 >
                                     {item.name}
                                 </a>
