@@ -14,7 +14,7 @@
     @routes
 </head>
 
-<body class="font-quattrocento-sans leading-none text-gray-800 antialiased">
+<body class="font-quattrocento-sans bg-gray-50 leading-none text-gray-800 antialiased">
     @inertia
 </body>
 
