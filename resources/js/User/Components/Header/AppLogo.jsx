@@ -2,9 +2,9 @@ import Logo from "@Assets/logo/logo.png";
 
 function AppLogo() {
     return (
-        <figure>
+        <figure className="aspect-square overflow-hidden">
             <a href="">
-                <img src={Logo} alt="" />
+                <img src={Logo} alt="" className="w-14 object-cover" />
             </a>
         </figure>
     );
