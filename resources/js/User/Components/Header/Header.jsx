@@ -5,15 +5,15 @@ import { Menu, ShoppingBag, CircleUserRound } from "lucide-react";
 function Header() {
     return (
         <header>
-            <div className="flex align-center justify-between">
-                <button className="">
+            <div className="flex items-center justify-between px-4 py-5">
+                <button className="flex-1">
                     <Menu size={26} />
                 </button>
 
                 <AppLogo />
 
-                <div className="">
-                    <ul className="flex align-center gap-4">
+                <div className="flex flex-1 justify-end">
+                    <ul className="flex items-center gap-6">
                         <li>
                             <a href="">
                                 <ShoppingBag size={26} />
