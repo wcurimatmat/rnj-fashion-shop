@@ -1,6 +1,6 @@
 import AppLogo from "./AppLogo";
 
-import { Menu, ShoppingBag, CircleUserRound } from "lucide-react";
+import { Menu } from "lucide-react";
 
 function Header() {
     return (
@@ -13,18 +13,12 @@ function Header() {
                 <AppLogo />
 
                 <div className="flex flex-1 justify-end">
-                    <ul className="flex items-center gap-6">
-                        <li>
-                            <a href="">
-                                <ShoppingBag size={26} />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <CircleUserRound size={26} />
-                            </a>
-                        </li>
-                    </ul>
+                    <a
+                        href=""
+                        className="rounded-sm bg-rose-300 px-4 py-2 font-bold text-gray-100"
+                    >
+                        Login
+                    </a>
                 </div>
             </div>
         </header>
