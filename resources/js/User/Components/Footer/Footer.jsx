@@ -1,7 +1,11 @@
+import Shop from "./Shop";
+
 function Footer() {
     return (
         <footer>
-            <div className=""></div>
+            <div className="">
+                <Shop />
+            </div>
         </footer>
     );
 }
