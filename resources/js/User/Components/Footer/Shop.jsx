@@ -1,11 +1,11 @@
 function Shop() {
     return (
-        <section className="grid gap-8">
+        <section className="grid gap-8 md:flex md:justify-between">
             <div className="grid gap-1">
                 <p className="font-quattrocento text-3xl font-bold">
                     R&J Fashion Shop
                 </p>
-                <p className="leading-7">
+                <p className="leading-7 max-w-2xs">
                     Providing collection of stylish, versatile, and comfortable
                     apparels.
                 </p>
