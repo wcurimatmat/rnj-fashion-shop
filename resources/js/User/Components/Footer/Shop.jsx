@@ -1,6 +1,6 @@
 function Shop() {
     return (
-        <section className="grid gap-8 md:flex md:justify-between">
+        <section className="grid gap-8 md:flex md:justify-between lg:grid">
             <div className="grid gap-1">
                 <p className="font-quattrocento text-3xl font-bold">
                     R&J Fashion Shop
