@@ -4,8 +4,8 @@ import ContactUs from "./ContactUs";
 
 function Footer() {
     return (
-        <footer>
-            <div className="">
+        <footer className="bg-rose-200 px-4 py-8">
+            <div className="grid gap-8">
                 <Shop />
                 <Nav />
                 <ContactUs />
