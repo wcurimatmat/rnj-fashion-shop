@@ -1,5 +1,6 @@
 import Shop from "./Shop";
-import Nav from "./Nav"
+import Nav from "./Nav";
+import ContactUs from "./ContactUs";
 
 function Footer() {
     return (
@@ -7,6 +8,7 @@ function Footer() {
             <div className="">
                 <Shop />
                 <Nav />
+                <ContactUs />
             </div>
         </footer>
     );
