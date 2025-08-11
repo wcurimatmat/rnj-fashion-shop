@@ -2,8 +2,8 @@ import NavItems from "@User/Utils/NavItems";
 
 function RenderFooterNavColumn({ title, links }) {
     return (
-        <div className="grid gap-2">
-            <p className="uppercase text-base font-bold">{title}</p>
+        <div className="flex flex-col gap-2">
+            <p className="text-base font-bold uppercase">{title}</p>
             <nav>
                 <ul className="grid gap-3.5">
                     {links.map(function ({ name, url }, index) {
@@ -21,7 +21,7 @@ function RenderFooterNavColumn({ title, links }) {
 
 function Nav() {
     return (
-        <section className="grid gap-6">
+        <section className="grid gap-6 md:flex md:gap-14">
             <RenderFooterNavColumn title="Pages" links={NavItems.pages} />
             <RenderFooterNavColumn title="Legal" links={NavItems.legals} />
             <RenderFooterNavColumn title="Help" links={NavItems.help} />
