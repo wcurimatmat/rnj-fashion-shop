@@ -2,10 +2,10 @@ import NavItems from "@User/Utils/NavItems";
 
 function RenderFooterNavColumn({ title, links }) {
     return (
-        <section>
-            <p>{title}</p>
+        <div className="grid gap-2">
+            <p className="uppercase text-base font-bold">{title}</p>
             <nav>
-                <ul>
+                <ul className="grid gap-3.5">
                     {links.map(function ({ name, url }, index) {
                         return (
                             <li key={index}>
@@ -15,13 +15,13 @@ function RenderFooterNavColumn({ title, links }) {
                     })}
                 </ul>
             </nav>
-        </section>
+        </div>
     );
 }
 
 function Nav() {
     return (
-        <section>
+        <section className="grid gap-6">
             <RenderFooterNavColumn title="Pages" links={NavItems.pages} />
             <RenderFooterNavColumn title="Legal" links={NavItems.legals} />
             <RenderFooterNavColumn title="Help" links={NavItems.help} />
