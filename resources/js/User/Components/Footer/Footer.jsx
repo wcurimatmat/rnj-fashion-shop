@@ -7,8 +7,10 @@ function Footer() {
         <footer className="bg-rose-200 px-4 py-8 md:px-16">
             <div className="grid gap-8">
                 <Shop />
-                <Nav />
-                <ContactUs />
+                <div className="grid gap-8">
+                    <Nav />
+                    <ContactUs />
+                </div>
             </div>
         </footer>
     );
