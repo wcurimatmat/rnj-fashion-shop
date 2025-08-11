@@ -1,15 +1,18 @@
 function Shop() {
     return (
-        <section>
-            <div className="">
-                <p>R&J Fashion Shop</p>
-                <p>
+        <section className="grid gap-8">
+            <div className="grid gap-1">
+                <p className="font-quattrocento text-3xl font-bold">
+                    R&J Fashion Shop
+                </p>
+                <p className="leading-7">
                     Providing collection of stylish, versatile, and comfortable
                     apparels.
                 </p>
             </div>
+
             <nav className="">
-                <ul>
+                <ul className="flex items-center gap-8">
                     <li>
                         <a href="">
                             <svg
