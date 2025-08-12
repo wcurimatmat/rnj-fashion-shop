@@ -1,7 +1,13 @@
-import Header from "@User/Components/Header/Header";
+import UserLayout from "@User/Layout/UserLayout";
+
+import Hero from "./Hero";
 
 function Index() {
-    return <Header />;
+    return (
+        <UserLayout>
+            <Hero />
+        </UserLayout>
+    );
 }
 
 export default Index;
