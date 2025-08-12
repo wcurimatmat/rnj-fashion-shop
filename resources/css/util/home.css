@@ -1,0 +1,12 @@
+@utility hero-background {
+    --hero-image: url("/resources/js/Assets/visuals/pexels-migsr87-8051256.jpg");
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            theme(colors.rose.800 / 0.5),
+            theme(colors.rose.200 / 0.5)
+        ),
+        var(--hero-image);
+    @apply bg-cover bg-center bg-no-repeat;
+}
