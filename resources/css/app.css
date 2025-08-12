@@ -16,3 +16,5 @@
     --font-quattrocento: "Quattrocento", serif;
     --font-quattrocento-sans: "Quattrocento Sans", sans-serif;
 }
+
+@import "./util/index.css";
