@@ -6,7 +6,9 @@ function UserLayout({ children }) {
         <>
             <Header />
 
-            <main>{children}</main>
+            <main className="px-4 md:px-16 lg:max-w-[1440px] lg:px-24">
+                {children}
+            </main>
 
             <Footer />
         </>
