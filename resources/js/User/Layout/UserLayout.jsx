@@ -6,7 +6,7 @@ function UserLayout({ children }) {
         <>
             <Header />
 
-            <main className="px-4 md:px-16 lg:max-w-[1440px] lg:px-24">
+            <main className="m-auto px-4 md:px-16 lg:max-w-[1440px] lg:px-24">
                 {children}
             </main>
 
