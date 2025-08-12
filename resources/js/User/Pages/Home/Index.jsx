@@ -6,8 +6,10 @@ import Features from "./Features";
 function Index() {
     return (
         <UserLayout>
-            <Hero />
-            <Features />
+            <div className="grid gap-8">
+                <Hero />
+                <Features />
+            </div>
         </UserLayout>
     );
 }
