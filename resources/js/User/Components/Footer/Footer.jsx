@@ -4,7 +4,7 @@ import ContactUs from "./ContactUs";
 
 function Footer() {
     return (
-        <footer className="bg-rose-200 px-4 py-16 md:px-16 lg:lg:px-24">
+        <footer className="mt-8 bg-rose-200 px-4 py-16 md:mt-12 md:px-16 lg:mt-20 lg:lg:px-24">
             <div className="m-auto grid gap-8 lg:flex lg:max-w-[1440px] lg:justify-between">
                 <Shop />
                 <div className="grid gap-8 md:flex md:justify-between lg:gap-20">
