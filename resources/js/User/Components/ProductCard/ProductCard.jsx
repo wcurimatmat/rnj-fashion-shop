@@ -3,7 +3,7 @@ import { ShoppingBag } from "lucide-react";
 
 function ProductCard() {
     return (
-        <div className="grid w-max gap-4">
+        <div className="grid gap-4 w-fit">
             <figure className="aspect-[3/4] max-w-2xs overflow-hidden rounded-md border border-gray-400">
                 <a href="#">
                     <img
