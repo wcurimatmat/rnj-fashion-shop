@@ -3,6 +3,7 @@ import UserLayout from "@User/Layout/UserLayout";
 import Hero from "./Hero";
 import Features from "./Features";
 import Proposition from "./Proposition";
+import Offer from "./Offer";
 
 function Index() {
     return (
@@ -11,6 +12,7 @@ function Index() {
                 <Hero />
                 <Features />
                 <Proposition />
+                <Offer />
             </div>
         </UserLayout>
     );
