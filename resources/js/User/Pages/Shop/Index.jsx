@@ -1,5 +1,6 @@
 import UserLayout from "@User/Layout/UserLayout";
-import ProductCard from "@User/Components/ProductCard/ProductCard";
+
+import ItemCollections from "./ItemCollections";
 
 function Index() {
     return (
@@ -17,25 +18,7 @@ function Index() {
                     </div>
                 </section>
 
-                <section>
-                    <div className="">
-                        <ul className="">
-                            <li>
-                                <ProductCard />
-                            </li>
-                            <li>
-                                <ProductCard />
-                            </li>
-                            <li>
-                                <ProductCard />
-                            </li>
-                            <li>
-                                <ProductCard />
-                            </li>
-                        </ul>
-                    </div>
-                    {/* TODO Pagination */}
-                </section>
+                <ItemCollections />
             </div>
         </UserLayout>
     );
