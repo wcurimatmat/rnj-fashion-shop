@@ -6,9 +6,7 @@ function Index() {
     return (
         <UserLayout>
             <div className="grid gap-8 md:gap-12 lg:gap-20">
-                <section>
-                    <h1>All Items</h1>
-                </section>
+
 
                 <section>
                     <div className="">
