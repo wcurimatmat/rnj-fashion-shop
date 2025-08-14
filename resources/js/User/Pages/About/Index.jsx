@@ -1,6 +1,8 @@
+import UserLayout from "@User/Layout/UserLayout";
+
 function About() {
     return (
-        <>
+        <UserLayout>
             <section>
                 <div className="">
                     <h1>About Us</h1>
@@ -34,9 +36,7 @@ function About() {
                     </p>
                 </div>
             </section>
-            <section></section>
-            <section></section>
-        </>
+        </UserLayout>
     );
 }
 
