@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Features from "./Features";
 import Proposition from "./Proposition";
 import Offer from "./Offer";
+import Promotional from "./Promotional";
 
 function Index() {
     return (
@@ -13,6 +14,7 @@ function Index() {
                 <Features />
                 <Proposition />
                 <Offer />
+                <Promotional />
             </div>
         </UserLayout>
     );
