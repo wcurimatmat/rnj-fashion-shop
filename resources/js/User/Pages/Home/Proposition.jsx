@@ -2,7 +2,7 @@ import PropositionVisual from "@Assets/visuals/pexels-daroon-19087201.jpg";
 
 function Proposition() {
     return (
-        <section className="grid gap-20 rounded-md bg-rose-100 p-14 md:p-20 xl:flex xl:items-center xl:p-28">
+        <section className="grid gap-20 rounded-md bg-rose-100 p-8 min-[450px]:p-14 md:p-20 xl:flex xl:items-center xl:p-28">
             <article className="flex-1">
                 <div className="mb-10 xl:mb-14">
                     <h2 className="font-quattrocento mb-2 text-2xl xl:mb-5 xl:text-3xl">
@@ -23,13 +23,13 @@ function Proposition() {
 
                 <a
                     href=""
-                    className="rounded-sm bg-rose-300 px-8 py-4 font-bold transition duration-200 ease-in-out hover:bg-rose-200"
+                    className="rounded-sm bg-rose-300 px-8 py-4 font-bold shadow-xl/30 shadow-rose-400 transition duration-200 ease-in-out hover:bg-rose-200"
                 >
                     Explore Collections
                 </a>
             </article>
 
-            <figure className="m-auto aspect-square w-full overflow-hidden rounded-md shadow-lg shadow-rose-300 md:max-w-md">
+            <figure className="m-auto aspect-square w-full overflow-hidden rounded-md shadow-xl/30 shadow-rose-400 md:max-w-md">
                 <img
                     src={PropositionVisual}
                     alt=""
