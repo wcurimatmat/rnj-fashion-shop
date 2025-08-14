@@ -10,3 +10,16 @@
         var(--hero-image);
     @apply bg-cover bg-center bg-no-repeat;
 }
+
+@utility promotional-background {
+    --background-image: url("/resources/js/assets/visuals/pexels-ron-lach-8387828.jpg");
+
+        background-image:
+        linear-gradient(
+            to bottom,
+            theme(colors.rose.800 / 0.5),
+            theme(colors.rose.200 / 0.5)
+        ),
+        var(--background-image);
+    @apply bg-cover bg-center bg-no-repeat;
+}
