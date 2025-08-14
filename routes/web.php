@@ -10,3 +10,7 @@ Route::get('/', function () {
 Route::get('/shop', function () {
     return Inertia::render("Shop/Index");
 });
+
+Route::get('/about', function () {
+    return Inertia::render("About/Index");
+});
