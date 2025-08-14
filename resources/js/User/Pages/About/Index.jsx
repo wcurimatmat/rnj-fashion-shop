@@ -4,17 +4,17 @@ import AboutUsVisual from "@Assets/visuals/pexels-liza-summer-6347546.jpg";
 function About() {
     return (
         <UserLayout>
-            <section className="m-auto grid max-w-2xl gap-8">
-                <div className="">
+            <section className="grid justify-center gap-12 lg:flex">
+                <div className="grid gap-8 min-[450px]:max-w-md md:max-w-xl">
                     <div className="">
-                        <h1 className="font-quattrocento text-2xl font-bold md:text-4xl lg:text-5xl">
+                        <h1 className="font-quattrocento text-4xl font-bold lg:text-5xl">
                             About Us
                         </h1>
                     </div>
 
                     <div className="grid gap-6 leading-7">
                         <p>
-                            At{" "}
+                            At
                             <span className="font-quattrocento font-bold text-rose-400">
                                 R&J Fashion Shop
                             </span>
@@ -47,8 +47,12 @@ function About() {
                     </div>
                 </div>
 
-                <figure>
-                    <img src={AboutUsVisual} alt="" />
+                <figure className="aspect-[3/4] max-w-sm overflow-hidden rounded-md border border-gray-400">
+                    <img
+                        src={AboutUsVisual}
+                        alt=""
+                        className="h-full w-full object-cover"
+                    />
                 </figure>
             </section>
         </UserLayout>
