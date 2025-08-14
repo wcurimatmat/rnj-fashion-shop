@@ -1,12 +1,13 @@
 import UserLayout from "@User/Layout/UserLayout";
 
 import ItemCollections from "./ItemCollections";
+import Header from "./Header";
 
 function Index() {
     return (
         <UserLayout>
-            <div className="grid gap-8 md:gap-12 lg:gap-20">
-
+            <div className="grid gap-8 lg:gap-12">
+                <Header />
 
                 <section>
                     <div className="">
