@@ -1,6 +1,6 @@
 function Promotional() {
     return (
-        <section className="promotional-background mb-8 rounded-lg py-36 font-bold text-gray-100 md:mb-12 lg:mb-20 lg:py-56">
+        <section className="promotional-background rounded-lg py-36 font-bold text-gray-100 lg:py-56">
             <div className="grid gap-8 text-center">
                 <h2 className="font-quattrocento m-auto text-2xl md:max-w-sm md:text-4xl md:max-lg:leading-14 lg:max-w-xl lg:text-5xl lg:leading-14">
                     Chic, Comfortable, and Always on Trend
