@@ -5,7 +5,7 @@
         linear-gradient(
             to bottom,
             theme(colors.rose.800 / 0.5),
-            theme(colors.rose.200 / 0.5)
+            theme(colors.rose.200 / 0.3)
         ),
         var(--hero-image);
     @apply bg-cover bg-center bg-no-repeat;
@@ -18,7 +18,7 @@
         linear-gradient(
             to bottom,
             theme(colors.rose.800 / 0.5),
-            theme(colors.rose.200 / 0.5)
+            theme(colors.rose.200 / 0.3)
         ),
         var(--background-image);
     @apply bg-cover bg-center bg-no-repeat;
