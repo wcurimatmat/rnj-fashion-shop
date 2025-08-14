@@ -19,7 +19,7 @@ function Index() {
 
     return (
         <UserLayout>
-            <section className="grid gap-8">
+            <section className="grid gap-8 min-[925px]:m-auto min-[925px]:flex min-[925px]:max-w-5xl min-[925px]:items-start min-[925px]:gap-20">
                 <figure class="aspect-[3/4] overflow-hidden rounded-md border-2 border-gray-400">
                     <img
                         src={ProductViewVisual}
@@ -28,9 +28,9 @@ function Index() {
                     />
                 </figure>
 
-                <div className="grid gap-6">
+                <div className="grid gap-6 min-[925px]:gap-12">
                     <div className="">
-                        <h1 className="font-quattrocento mb-2 text-2xl font-bold">
+                        <h1 className="font-quattrocento mb-2 text-2xl font-bold min-[925px]:text-4xl">
                             Lorem ipsum dolor sit amet.
                         </h1>
                         <p>₱150.00</p>
