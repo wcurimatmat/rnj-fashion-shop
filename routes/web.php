@@ -14,3 +14,7 @@ Route::get('/shop', function () {
 Route::get('/about', function () {
     return Inertia::render("About/Index");
 });
+
+Route::get('/shop/product-view', function () {
+    return Inertia::render("ProductView/Index");
+});
