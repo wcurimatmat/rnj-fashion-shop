@@ -18,7 +18,7 @@ function Header() {
                         className="flex-1 cursor-pointer md:hidden"
                         onClick={handleSetNavState}
                     >
-                        <Menu size={26} />
+                        <Menu size={26} strokeWidth={1.5} />
                     </button>
 
                     <AppLogo />
