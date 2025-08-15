@@ -19,6 +19,6 @@ Route::get('/shop/product-view', function () {
     return Inertia::render("ProductView/Index");
 });
 
-Route::get("/sign-in", function () {
-    return Inertia::render('Auth/Index');
+Route::get("/account/login", function () {
+    return Inertia::render('Auth/Login');
 });
