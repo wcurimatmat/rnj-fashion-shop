@@ -26,3 +26,7 @@ Route::get("/account/login", function () {
 Route::get('/account/register', function () {
     return Inertia::render('Auth/Register');
 })->name('register');
+
+Route::get('/cart', function () {
+    return Inertia::render("Cart/Index");
+});
