@@ -1,7 +1,7 @@
 import UserLayout from "@User/Layout/UserLayout";
 import AboutUsVisual from "@Assets/visuals/pexels-liza-summer-6347546.jpg";
 
-function About() {
+function Index() {
     return (
         <UserLayout>
             <section className="grid justify-center gap-12 lg:flex">
@@ -59,4 +59,4 @@ function About() {
     );
 }
 
-export default About;
+export default Index;
