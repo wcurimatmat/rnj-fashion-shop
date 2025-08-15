@@ -8,18 +8,20 @@ function Login() {
                 <p>Enter your email and password to login:</p>
             </section>
 
-            <form action="">
-                <div className="">
-                    <label htmlFor="">Email</label>
-                    <input type="text" name="" id="" />
-                </div>
-                <div className="">
-                    <label htmlFor="">Password</label>
-                    <input type="password" name="" id="" />
-                </div>
+            <section>
+                <form action="">
+                    <div className="">
+                        <label htmlFor="">Email</label>
+                        <input type="text" name="" id="" />
+                    </div>
+                    <div className="">
+                        <label htmlFor="">Password</label>
+                        <input type="password" name="" id="" />
+                    </div>
 
-                <button type="submit">Login</button>    
-            </form>
+                    <button type="submit">Login</button>
+                </form>
+            </section>
         </UserLayout>
     );
 }
