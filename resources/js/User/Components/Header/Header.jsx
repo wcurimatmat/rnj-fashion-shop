@@ -1,6 +1,6 @@
 import AppLogo from "./AppLogo";
 import Nav from "./Nav";
-import { Menu } from "lucide-react";
+import { Menu, ShoppingBag, UserRound } from "lucide-react";
 import { useState } from "react";
 
 function Header() {
@@ -25,16 +25,20 @@ function Header() {
 
                     <Nav navState={navState} />
 
-                    <div className="flex flex-1 justify-end">
-                        <a
-                            href=""
-                            className="rounded-sm bg-rose-400 transition duration-200 ease-in-out hover:bg-rose-300"
-                        >
-                            <p className="px-4 py-2 font-bold text-gray-100 md:px-6 md:py-3">
-                                Login
-                            </p>
-                        </a>
-                    </div>
+                    <nav className="flex flex-1 justify-end">
+                        <ul className="flex gap-6">
+                            <li>
+                                <a href="">
+                                    <UserRound size={26} strokeWidth={1.5} />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <ShoppingBag size={26} strokeWidth={1.5} />
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </header>
             <div
