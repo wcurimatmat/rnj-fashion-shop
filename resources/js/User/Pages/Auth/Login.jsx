@@ -1,6 +1,10 @@
 import UserLayout from "@User/Layout/UserLayout";
+import { DynamicIcon } from "lucide-react/dynamic";
+import { useState } from "react";
 
 function Login() {
+    const [passwordState, setPasswordState] = useState(false);
+
     return (
         <UserLayout>
             <div className="m-auto grid max-w-md gap-8 py-20">
@@ -25,13 +29,28 @@ function Login() {
                         </div>
                         <div className="flex flex-col gap-2">
                             <label htmlFor="">Password</label>
-                            <input
-                                type="password"
-                                name=""
-                                id=""
-                                placeholder="Password"
-                                className="rounded-md border border-gray-300 p-4 outline-transparent focus:border-rose-300"
-                            />
+                            <div className="relative flex items-center">
+                                <input
+                                    type={`${passwordState ? "text" : "password"}`}
+                                    name=""
+                                    id=""
+                                    placeholder="Password"
+                                    className="w-full rounded-md border border-gray-300 p-4 pr-12 outline-transparent focus:border-rose-300"
+                                />
+                                <button
+                                    className="absolute right-4"
+                                    type="button"
+                                    onClick={() =>
+                                        setPasswordState(!passwordState)
+                                    }
+                                >
+                                    <DynamicIcon
+                                        name={`${passwordState ? "eye-closed" : "eye"}`}
+                                        size={24}
+                                        className="text-gray-500"
+                                    />
+                                </button>
+                            </div>
                         </div>
                         <button
                             type="submit"
@@ -44,7 +63,13 @@ function Login() {
 
                 <section>
                     <p className="text-center">
-                        Don't have an account? <a href="" className="text-rose-400 font-bold hover:text-rose-300">Sign Up</a>
+                        Don't have an account?{" "}
+                        <a
+                            href=""
+                            className="font-bold text-rose-400 hover:text-rose-300"
+                        >
+                            Sign Up
+                        </a>
                     </p>
                 </section>
             </div>
