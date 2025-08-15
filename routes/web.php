@@ -30,3 +30,7 @@ Route::get('/account/register', function () {
 Route::get('/cart', function () {
     return Inertia::render("Cart/Index");
 });
+
+Route::get('/account', function () {
+    return Inertia::render('Account/Index');
+});
