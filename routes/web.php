@@ -21,8 +21,8 @@ Route::get('/shop/product-view', function () {
 
 Route::get("/account/login", function () {
     return Inertia::render('Auth/Login');
-});
+})->name('login');
 
 Route::get('/account/register', function () {
     return Inertia::render('Auth/Register');
-});
+})->name('register');
