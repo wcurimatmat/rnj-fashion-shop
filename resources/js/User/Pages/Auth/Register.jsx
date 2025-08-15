@@ -3,8 +3,8 @@ import { DynamicIcon } from "lucide-react/dynamic";
 import { useState } from "react";
 
 function Register() {
-    const [passwordFieldState, setPasswordFieldState] = useState(false)
-    
+    const [passwordFieldState, setPasswordFieldState] = useState(false);
+
     return (
         <UserLayout>
             <div className="m-auto grid max-w-md gap-8 py-20">
@@ -61,7 +61,9 @@ function Register() {
                                     className="absolute right-4"
                                     type="button"
                                     onClick={() =>
-                                        setPasswordFieldState(!passwordFieldState)
+                                        setPasswordFieldState(
+                                            !passwordFieldState,
+                                        )
                                     }
                                 >
                                     <DynamicIcon
@@ -85,7 +87,7 @@ function Register() {
                     <p className="text-center">
                         Already have an account?{" "}
                         <a
-                            href=""
+                            href={route("login")}
                             className="font-bold text-rose-400 hover:text-rose-300"
                         >
                             Login
