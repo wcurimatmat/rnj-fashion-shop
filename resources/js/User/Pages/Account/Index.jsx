@@ -76,7 +76,7 @@ function Index({ children }) {
 
             <div className="mt-20 min-[1200px]:flex min-[1200px]:gap-20 min-[1350px]:gap-40">
                 <aside className="hidden min-[1200px]:block">
-                    <ul className="grid gap-6 text-xl">
+                    <ul className="grid gap-6 text-lg">
                         <li className="">
                             <button
                                 className={`cursor-pointer ${activeTab === 0 ? "text-rose-400" : ""}`}
