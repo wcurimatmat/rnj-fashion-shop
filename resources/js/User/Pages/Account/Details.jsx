@@ -9,54 +9,52 @@ function Details() {
 
             <div className="grid gap-8">
                 <section>
-                    <header className="mb-2 border-2 border-x-0 border-t-0 border-b-gray-300">
+                    <header className="mb-6 border-2 border-x-0 border-t-0 border-b-gray-300">
                         <h3 className="text-xl font-bold">
-                            Personal Information
+                            1. Personal Information
                         </h3>
                     </header>
 
-                    <div className="">
+                    <div className="lg:flex lg:gap-20">
                         <div className="mb-6">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Corrupti, magni.
+                            <p className="leading-7 lg:w-[32ch]">
+                                Update your name and phone number so we can keep
+                                your account up to date.
                             </p>
                         </div>
 
-                        <div className="">
-                            <form action="" className="grid gap-3">
-                                <div className="grid gap-3">
-                                    <div className="flex flex-col gap-1">
-                                        <label
-                                            htmlFor=""
-                                            className="text-sm font-bold text-gray-600 uppercase"
-                                        >
-                                            First Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            name=""
-                                            id=""
-                                            placeholder="First Name"
-                                            className="rounded-md border border-gray-400 p-3 focus:border-rose-400"
-                                        />
-                                    </div>
+                        <div className="flex-1">
+                            <form action="" className="grid gap-4 lg:gap-6">
+                                <div className="flex flex-col gap-1">
+                                    <label
+                                        htmlFor=""
+                                        className="text-sm font-bold text-gray-600 uppercase"
+                                    >
+                                        First Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="First Name"
+                                        className="rounded-md border border-gray-400 p-3 focus:border-rose-400"
+                                    />
+                                </div>
 
-                                    <div className="flex flex-col gap-1">
-                                        <label
-                                            htmlFor=""
-                                            className="text-sm font-bold text-gray-600 uppercase"
-                                        >
-                                            Last Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            name=""
-                                            id=""
-                                            placeholder="Last Name"
-                                            className="rounded-md border border-gray-400 p-3 focus:border-rose-400"
-                                        />
-                                    </div>
+                                <div className="flex flex-col gap-1">
+                                    <label
+                                        htmlFor=""
+                                        className="text-sm font-bold text-gray-600 uppercase"
+                                    >
+                                        Last Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name=""
+                                        id=""
+                                        placeholder="Last Name"
+                                        className="rounded-md border border-gray-400 p-3 focus:border-rose-400"
+                                    />
                                 </div>
 
                                 <div className="flex flex-col gap-1">
@@ -87,20 +85,20 @@ function Details() {
                 </section>
 
                 <section>
-                    <header className="mb-2 border-2 border-x-0 border-t-0 border-b-gray-300">
-                        <h3 className="text-xl font-bold">E-mail Address</h3>
+                    <header className="mb-6 border-2 border-x-0 border-t-0 border-b-gray-300">
+                        <h3 className="text-xl font-bold">2. E-mail Address</h3>
                     </header>
 
-                    <div className="">
+                    <div className="lg:flex lg:gap-20">
                         <div className="mb-6">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Corrupti, magni.
+                            <p className="leading-7 lg:w-[32ch]">
+                                Change the email linked to your account. Make
+                                sure it’s one you check often.
                             </p>
                         </div>
 
-                        <div className="">
-                            <form action="" className="grid gap-3">
+                        <div className="flex-1">
+                            <form action="" className="grid gap-3 lg:gap-6">
                                 <div className="flex flex-col gap-1">
                                     <label
                                         htmlFor=""
@@ -129,20 +127,20 @@ function Details() {
                 </section>
 
                 <section>
-                    <header className="mb-2 border-2 border-x-0 border-t-0 border-b-gray-300">
-                        <h3 className="text-xl font-bold">Password</h3>
+                    <header className="mb-6 border-2 border-x-0 border-t-0 border-b-gray-300">
+                        <h3 className="text-xl font-bold">3. Password</h3>
                     </header>
 
-                    <div className="">
+                    <div className="lg:flex lg:gap-20">
                         <div className="mb-6">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Corrupti, magni.
+                            <p className="leading-7 lg:w-[32ch]">
+                                Keep your account secure by updating your
+                                password regularly.
                             </p>
                         </div>
 
-                        <div className="">
-                            <form action="" className="grid gap-3">
+                        <div className="flex-1">
+                            <form action="" className="grid gap-3 lg:gap-6">
                                 <div className="flex flex-col gap-1">
                                     <label
                                         htmlFor=""
