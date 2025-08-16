@@ -29,7 +29,7 @@ function Index({ children }) {
                 </h1>
             </section>
 
-            <section className="relative mb-4 flex justify-end">
+            <section className="relative mb-4 flex justify-end min-[1200px]:hidden">
                 <div className="">
                     <button
                         className="flex cursor-pointer items-center gap-2 rounded-md border border-gray-400 bg-gray-200 px-4 py-2 active:bg-gray-300"
@@ -40,13 +40,13 @@ function Index({ children }) {
                     </button>
 
                     <div
-                        className={`absolute left-0 mt-4 w-full rounded-md border border-gray-300 bg-gray-200 px-4 ${dropdownMenuState ? "visible opacity-100" : "invisible opacity-0"} transition duration-200 ease-in-out`}
+                        className={`absolute left-0 mt-4 w-full rounded-md border border-gray-300 bg-gray-200 px-4 md:px-8 ${dropdownMenuState ? "visible opacity-100" : "invisible opacity-0"} transition duration-200 ease-in-out`}
                     >
                         <ul className="divide-y divide-gray-400">
                             <li className="">
                                 <button
                                     onClick={() => handleActiveTab(0)}
-                                    className="w-full cursor-pointer py-3 text-left"
+                                    className="w-full cursor-pointer py-3 text-left md:py-5"
                                 >
                                     Details
                                 </button>
@@ -54,18 +54,18 @@ function Index({ children }) {
                             <li className="">
                                 <button
                                     onClick={() => handleActiveTab(1)}
-                                    className="w-full cursor-pointer py-3 text-left"
+                                    className="w-full cursor-pointer py-3 text-left md:py-5"
                                 >
                                     Address Book
                                 </button>
                             </li>
                             <li className="">
-                                <button className="w-full cursor-pointer py-3 text-left">
+                                <button className="w-full cursor-pointer py-3 text-left md:py-5">
                                     Orders
                                 </button>
                             </li>
                             <li className="">
-                                <button className="w-full cursor-pointer py-3 text-left">
+                                <button className="w-full cursor-pointer py-3 text-left md:py-5">
                                     Account
                                 </button>
                             </li>
@@ -74,25 +74,45 @@ function Index({ children }) {
                 </div>
             </section>
 
-            <div className="">
-                <aside className="hidden">
-                    <ul className="">
+            <div className="mt-20 min-[1200px]:flex min-[1200px]:gap-20 min-[1350px]:gap-40">
+                <aside className="hidden min-[1200px]:block">
+                    <ul className="grid gap-6 text-xl">
                         <li className="">
-                            <button>Details</button>
+                            <button
+                                className="cursor-pointer"
+                                onClick={() => setActiveTab(0)}
+                            >
+                                Details
+                            </button>
                         </li>
                         <li className="">
-                            <button>Address Book</button>
+                            <button
+                                className="cursor-pointer"
+                                onClick={() => setActiveTab(1)}
+                            >
+                                Address Book
+                            </button>
                         </li>
                         <li className="">
-                            <button>Orders</button>
+                            <button
+                                className="cursor-pointer"
+                                onClick={() => setActiveTab(2)}
+                            >
+                                Orders
+                            </button>
                         </li>
                         <li className="">
-                            <button>Account</button>
+                            <button
+                                className="cursor-pointer"
+                                onClick={() => setActiveTab(3)}
+                            >
+                                Account
+                            </button>
                         </li>
                     </ul>
                 </aside>
 
-                <section>
+                <section className="flex-1">
                     {activeTab === 0 && <Details />}
                     {activeTab === 1 && <AddressBook />}
                 </section>
