@@ -79,7 +79,7 @@ function Index({ children }) {
                     <ul className="grid gap-6 text-xl">
                         <li className="">
                             <button
-                                className="cursor-pointer"
+                                className={`cursor-pointer ${activeTab === 0 ? "text-rose-400" : ""}`}
                                 onClick={() => setActiveTab(0)}
                             >
                                 Details
@@ -87,7 +87,7 @@ function Index({ children }) {
                         </li>
                         <li className="">
                             <button
-                                className="cursor-pointer"
+                                className={`cursor-pointer ${activeTab === 1 ? "text-rose-400" : ""}`}
                                 onClick={() => setActiveTab(1)}
                             >
                                 Address Book
@@ -95,7 +95,7 @@ function Index({ children }) {
                         </li>
                         <li className="">
                             <button
-                                className="cursor-pointer"
+                                className={`cursor-pointer ${activeTab === 2 ? "text-rose-400" : ""}`}
                                 onClick={() => setActiveTab(2)}
                             >
                                 Orders
@@ -103,7 +103,7 @@ function Index({ children }) {
                         </li>
                         <li className="">
                             <button
-                                className="cursor-pointer"
+                                className={`cursor-pointer ${activeTab === 3 ? "text-rose-400" : ""}`}
                                 onClick={() => setActiveTab(3)}
                             >
                                 Account
