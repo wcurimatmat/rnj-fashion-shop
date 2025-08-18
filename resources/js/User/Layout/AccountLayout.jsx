@@ -35,41 +35,37 @@ function AccountLayout({ children }) {
                     <div
                         className={`absolute left-0 mt-4 w-full rounded-md border border-gray-300 bg-gray-200 px-4 md:px-8 ${dropdownMenuState ? "visible opacity-100" : "invisible opacity-0"} transition duration-200 ease-in-out`}
                     >
-                        <ul className="divide-y divide-gray-400">
-                            <ul className="grid gap-6 text-lg">
-                                <li>
-                                    <Link
-                                        href=""
-                                        className="w-full py-3 text-left md:py-5"
-                                    >
+                        <ul className="text-md divide-y divide-gray-400">
+                            <li>
+                                <Link href={route("account.order.index")}>
+                                    <p className="w-full py-3 text-left md:py-5">
                                         Orders
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href=""
-                                        className="w-full py-3 text-left md:py-5"
-                                    >
+                                    </p>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={route("account.details.index")}>
+                                    <p className="w-full py-3 text-left md:py-5">
                                         Details
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href=""
-                                        className="w-full py-3 text-left md:py-5"
-                                    >
+                                    </p>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href={route("account.address-book.index")}
+                                >
+                                    <p className="w-full py-3 text-left md:py-5">
                                         Address Book
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href=""
-                                        className="w-full cursor-pointer py-3 text-left md:py-5"
-                                    >
+                                    </p>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="">
+                                    <p className="w-full py-3 text-left md:py-5">
                                         Account
-                                    </Link>
-                                </li>
-                            </ul>
+                                    </p>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
