@@ -1,4 +1,3 @@
-import Index from "./Index";
 import { MapPinCheck, MapPinMinus, MapPinPlus, SquarePen } from "lucide-react";
 
 function AddressBook() {
