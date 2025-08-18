@@ -1,6 +1,8 @@
+import AccountLayout from "@User/Layout/AccountLayout";
+
 function Details() {
     return (
-        <>
+        <AccountLayout>
             <section className="mb-6">
                 <header>
                     <h2 className="text-2xl font-bold">My Details</h2>
@@ -184,7 +186,7 @@ function Details() {
                     </div>
                 </section>
             </div>
-        </>
+        </AccountLayout>
     );
 }
 
