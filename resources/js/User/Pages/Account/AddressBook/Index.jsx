@@ -1,7 +1,7 @@
 import AccountLayout from "@User/Layout/AccountLayout";
 import { MapPinCheck, MapPinMinus, MapPinPlus, SquarePen } from "lucide-react";
 
-function AddressBook() {
+function Index() {
     return (
         <AccountLayout>
             <section className="mb-6">
@@ -129,4 +129,4 @@ function AddressBook() {
     );
 }
 
-export default AddressBook;
+export default Index;
