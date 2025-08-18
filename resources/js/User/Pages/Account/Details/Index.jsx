@@ -1,6 +1,6 @@
 import AccountLayout from "@User/Layout/AccountLayout";
 
-function Details() {
+function Index() {
     return (
         <AccountLayout>
             <section className="mb-6">
@@ -190,4 +190,4 @@ function Details() {
     );
 }
 
-export default Details;
+export default Index;
