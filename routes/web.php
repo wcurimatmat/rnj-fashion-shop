@@ -42,3 +42,7 @@ Route::get('/account/details', function () {
 Route::get('/account/address-book', function () {
     return Inertia::render('Account/AddressBook/Index');
 })->name('account.address-book.index');
+
+Route::get('/account/address-book/create', function () {
+    return Inertia::render('Account/AddressBook/Create');
+})->name('account.address-book.create');
