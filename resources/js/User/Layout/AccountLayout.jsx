@@ -1,7 +1,12 @@
 import UserLayout from "@User/Layout/UserLayout";
+import AccountVisual from "@Assets/visuals/pexels-soldiervip-1391498.jpg";
+import { Menu } from "lucide-react";
 import { Link } from "@inertiajs/react";
+import { useState } from "react";
 
-function AccountLayout() {
+function AccountLayout({ children }) {
+    const [dropdownMenuState, setDropdownMenuState] = useState(false);
+
     return (
         <UserLayout>
             <section className="mb-4 flex flex-col items-center gap-4 rounded-md bg-rose-100 py-6">
