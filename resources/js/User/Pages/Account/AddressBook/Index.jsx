@@ -1,5 +1,6 @@
 import AccountLayout from "@User/Layout/AccountLayout";
 import { MapPinCheck, MapPinMinus, MapPinPlus, SquarePen } from "lucide-react";
+import { Link } from "@inertiajs/react";
 
 function Index() {
     return (
@@ -119,10 +120,13 @@ function Index() {
                     </ul>
                 </section>
                 <section>
-                    <button className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-rose-300 py-5 font-bold transition-colors duration-200 ease-in-out hover:bg-rose-200 active:bg-rose-200">
+                    <Link
+                        href={route("account.address-book.create")}
+                        className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-rose-300 py-5 font-bold transition-colors duration-200 ease-in-out hover:bg-rose-200 active:bg-rose-200"
+                    >
                         <MapPinPlus size={20} />
                         <p>Add Address</p>
-                    </button>
+                    </Link>
                 </section>
             </div>
         </AccountLayout>
