@@ -1,8 +1,9 @@
+import AccountLayout from "@User/Layout/AccountLayout";
 import { MapPinCheck, MapPinMinus, MapPinPlus, SquarePen } from "lucide-react";
 
 function AddressBook() {
     return (
-        <>
+        <AccountLayout>
             <section className="mb-6">
                 <header>
                     <h2 className="text-2xl font-bold">Address Book</h2>
@@ -124,7 +125,7 @@ function AddressBook() {
                     </button>
                 </section>
             </div>
-        </>
+        </AccountLayout>
     );
 }
 
