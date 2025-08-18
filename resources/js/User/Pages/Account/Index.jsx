@@ -74,7 +74,7 @@ function Index({ children }) {
                 </div>
             </section>
 
-            <div className="mt-20 min-[1200px]:flex min-[1200px]:gap-20 min-[1350px]:gap-40">
+            <div className="min-[1200px]:mt-20 min-[1200px]:flex min-[1200px]:gap-20 min-[1350px]:gap-40">
                 <aside className="hidden min-[1200px]:block">
                     <ul className="grid gap-6 text-lg">
                         <li className="">
