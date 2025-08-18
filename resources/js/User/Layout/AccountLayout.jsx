@@ -1,10 +1,12 @@
 import UserLayout from "@User/Layout/UserLayout";
 import AccountVisual from "@Assets/visuals/pexels-soldiervip-1391498.jpg";
 import { Menu } from "lucide-react";
-import { Link } from "@inertiajs/react";
+import { Link, usePage } from "@inertiajs/react";
 import { useState } from "react";
 
 function AccountLayout({ children }) {
+    const { component } = usePage();
+
     const [dropdownMenuState, setDropdownMenuState] = useState(false);
 
     return (
@@ -75,17 +77,38 @@ function AccountLayout({ children }) {
                 <aside className="hidden min-[1200px]:block">
                     <ul className="grid gap-6 text-lg">
                         <li>
-                            <Link href={route("account.order.index")}>
+                            <Link
+                                href={route("account.order.index")}
+                                className={
+                                    component.startsWith("Account/Orders")
+                                        ? "text-rose-400"
+                                        : ""
+                                }
+                            >
                                 Orders
                             </Link>
                         </li>
                         <li>
-                            <Link href={route("account.details.index")}>
+                            <Link
+                                href={route("account.details.index")}
+                                className={
+                                    component.startsWith("Account/Details")
+                                        ? "text-rose-400"
+                                        : ""
+                                }
+                            >
                                 Details
                             </Link>
                         </li>
                         <li>
-                            <Link href={route("account.address-book.index")}>
+                            <Link
+                                href={route("account.address-book.index")}
+                                className={
+                                    component.startsWith("Account/AddressBook")
+                                        ? "text-rose-400"
+                                        : ""
+                                }
+                            >
                                 Address Book
                             </Link>
                         </li>
