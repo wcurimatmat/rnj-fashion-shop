@@ -1,4 +1,5 @@
 import UserLayout from "@User/Layout/UserLayout";
+import { Link } from "@inertiajs/react";
 
 function AccountLayout() {
     return (
@@ -32,36 +33,36 @@ function AccountLayout() {
                         <ul className="divide-y divide-gray-400">
                             <ul className="grid gap-6 text-lg">
                                 <li>
-                                    <a
+                                    <Link
                                         href=""
                                         className="w-full py-3 text-left md:py-5"
                                     >
                                         Orders
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
+                                    <Link
                                         href=""
                                         className="w-full py-3 text-left md:py-5"
                                     >
                                         Details
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
+                                    <Link
                                         href=""
                                         className="w-full py-3 text-left md:py-5"
                                     >
                                         Address Book
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
+                                    <Link
                                         href=""
                                         className="w-full cursor-pointer py-3 text-left md:py-5"
                                     >
                                         Account
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </ul>
@@ -73,16 +74,16 @@ function AccountLayout() {
                 <aside className="hidden min-[1200px]:block">
                     <ul className="grid gap-6 text-lg">
                         <li>
-                            <a href="">Orders</a>
+                            <Link href="">Orders</Link>
                         </li>
                         <li>
-                            <a href="">Details</a>
+                            <Link href="">Details</Link>
                         </li>
                         <li>
-                            <a href="">Address Book</a>
+                            <Link href="">Address Book</Link>
                         </li>
                         <li>
-                            <a href="">Account</a>
+                            <Link href="">Account</Link>
                         </li>
                     </ul>
                 </aside>
