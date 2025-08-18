@@ -32,5 +32,13 @@ Route::get('/cart', function () {
 });
 
 Route::get('/account', function () {
-    return Inertia::render('Account/Index');
-});
+    return Inertia::render('Account/Orders/Index');
+})->name('account.order.index');
+
+Route::get('/account/details', function () {
+    return Inertia::render('Account/Details/Index');
+})->name('account.details.index');
+
+Route::get('/account/address-book', function () {
+    return Inertia::render('Account/AddressBook/Index');
+})->name('account.address-book.index');
