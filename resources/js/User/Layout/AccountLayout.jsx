@@ -74,13 +74,19 @@ function AccountLayout() {
                 <aside className="hidden min-[1200px]:block">
                     <ul className="grid gap-6 text-lg">
                         <li>
-                            <Link href="">Orders</Link>
+                            <Link href={route("account.order.index")}>
+                                Orders
+                            </Link>
                         </li>
                         <li>
-                            <Link href="">Details</Link>
+                            <Link href={route("account.details.index")}>
+                                Details
+                            </Link>
                         </li>
                         <li>
-                            <Link href="">Address Book</Link>
+                            <Link href={route("account.address-book.index")}>
+                                Address Book
+                            </Link>
                         </li>
                         <li>
                             <Link href="">Account</Link>
