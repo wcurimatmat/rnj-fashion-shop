@@ -11,15 +11,15 @@ function AccountLayout({ children }) {
 
     return (
         <UserLayout>
-            <section className="mb-4 flex flex-col items-center gap-4 rounded-md bg-rose-100 py-6">
-                <figure className="aspect-square w-16 overflow-hidden rounded-full">
+            <section className="mb-4 flex flex-col items-center gap-4 rounded-md bg-rose-100 py-6 md:py-10 lg:py-14">
+                <figure className="aspect-square size-16 overflow-hidden rounded-full md:size-24 lg:size-32">
                     <img
                         src={AccountVisual}
                         alt=""
                         className="h-full w-full object-cover object-[0_20%]"
                     />
                 </figure>
-                <h1 className="font-quattrocento text-2xl font-bold">
+                <h1 className="font-quattrocento text-2xl font-bold lg:text-3xl">
                     Maria Llewelyn
                 </h1>
             </section>
