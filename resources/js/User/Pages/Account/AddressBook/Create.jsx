@@ -63,8 +63,6 @@ function Create() {
         if (id === "region") {
             const selected = regions.find((region) => region.code === value);
 
-            console.log(selected);
-
             setAddressForm((prev) => ({
                 ...prev,
                 region: { code: value, name: selected?.name || "" },
