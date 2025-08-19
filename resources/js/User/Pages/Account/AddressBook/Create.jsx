@@ -70,6 +70,10 @@ function Create() {
                 cityMunicipality: { code: "", name: "" },
                 barangay: { code: "", name: "" },
             }));
+
+            setProvinces([]);
+            setCitiesMunicipalities([]);
+            setBarangays([]);
         }
 
         if (id === "province") {
@@ -83,6 +87,9 @@ function Create() {
                 cityMunicipality: { code: "", name: "" },
                 barangay: { code: "", name: "" },
             }));
+
+            setCitiesMunicipalities([]);
+            setBarangays([]);
         }
 
         if (id === "cityMunicipality") {
@@ -95,6 +102,8 @@ function Create() {
                 cityMunicipality: { code: value, name: selected?.name || "" },
                 barangay: { code: "", name: "" },
             }));
+
+            setBarangays([]);
         }
 
         if (id === "barangay") {
@@ -154,7 +163,7 @@ function Create() {
                             value={addressForm.region.code}
                             onChange={handleChange}
                         >
-                            <option value="default">-- Select Region --</option>
+                            <option value="">-- Select Region --</option>
                             {regions.map((region) => (
                                 <option
                                     key={region.code}
@@ -179,9 +188,7 @@ function Create() {
                             value={addressForm.province.code}
                             onChange={handleChange}
                         >
-                            <option value="default">
-                                -- Select Province --
-                            </option>
+                            <option value="">-- Select Province --</option>
                             {provinces.map((province) => (
                                 <option
                                     key={province.code}
@@ -206,7 +213,7 @@ function Create() {
                             value={addressForm.cityMunicipality.code}
                             onChange={handleChange}
                         >
-                            <option value="default">
+                            <option value="">
                                 -- Select City/Municipality --
                             </option>
                             {citiesMunicipalities.map((cityMunicipality) => (
@@ -233,9 +240,7 @@ function Create() {
                             value={addressForm.barangay.code}
                             onChange={handleChange}
                         >
-                            <option value="default">
-                                -- Select Barangay --
-                            </option>
+                            <option value="">-- Select Barangay --</option>
                             {barangays.map((barangay) => (
                                 <option
                                     key={barangay.code}
