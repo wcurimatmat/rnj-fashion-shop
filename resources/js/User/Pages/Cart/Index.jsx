@@ -18,7 +18,7 @@ function Index() {
                         <li className="flex items-start justify-between">
                             <div className="flex items-start gap-4">
                                 <a href="">
-                                    <figure className="aspect-square max-w-24 lg:max-w-32">
+                                    <figure className="aspect-[3/4] w-24 lg:w-32">
                                         <img
                                             src={CartVisual}
                                             alt=""
@@ -29,7 +29,7 @@ function Index() {
 
                                 <div className="grid gap-1">
                                     <a href="">
-                                        <p className="w-[13ch] overflow-hidden text-base font-bold overflow-ellipsis whitespace-nowrap lg:text-xl">
+                                        <p className="w-[13ch] overflow-hidden text-xl font-bold overflow-ellipsis whitespace-nowrap lg:text-xl">
                                             Lorem ipsum dolor sit amet.
                                         </p>
                                     </a>
