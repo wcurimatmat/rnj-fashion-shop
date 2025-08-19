@@ -39,7 +39,7 @@ function AccountLayout({ children }) {
                     >
                         <ul className="text-md divide-y divide-gray-400">
                             <li>
-                                <Link href={route("account.order.index")}>
+                                <Link href={route("account.orders.index")}>
                                     <p className="w-full py-3 text-left md:py-5">
                                         Orders
                                     </p>
