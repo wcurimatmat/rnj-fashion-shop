@@ -8,76 +8,118 @@ function Create() {
     const [citiesMunicipalities, setCitiesMunicipalities] = useState([]);
     const [barangays, setBarangays] = useState([]);
     const [addressForm, setAddressForm] = useState({
-        region: "",
-        province: "",
-        cityMunicipality: "",
-        barangay: "",
+        region: { code: "", name: "" },
+        province: { code: "", name: "" },
+        cityMunicipality: { code: "", name: "" },
+        barangay: { code: "", name: "" },
         addressLine1: "",
         addressLine2: "",
     });
 
+    async function fetchLocation(URL, setter) {
+        try {
+            const response = await fetch(URL);
+            const data = await response.json();
+            setter(data);
+        } catch (error) {
+            console.log("Fetch Error:", error);
+        }
+    }
+
     useEffect(() => {
-        fetch("https://psgc.gitlab.io/api/regions/")
-            .then((response) => response.json())
-            .then((data) => setRegions(data));
+        fetchLocation("https://psgc.gitlab.io/api/regions/", setRegions);
     }, []);
 
     useEffect(() => {
-        fetch(
-            `https://psgc.gitlab.io/api/regions/${addressForm.region}/provinces/`,
-        )
-            .then((response) => response.json())
-            .then((data) => setProvinces(data));
-    }, [addressForm.region]);
+        if (addressForm.region.code) {
+            fetchLocation(
+                `https://psgc.gitlab.io/api/regions/${addressForm.region.code}/provinces/`,
+                setProvinces,
+            );
+        }
+    }, [addressForm.region.code]);
 
     useEffect(() => {
-        fetch(
-            `https://psgc.gitlab.io/api/provinces/${addressForm.province}/cities-municipalities/`,
-        )
-            .then((response) => response.json())
-            .then((data) => setCitiesMunicipalities(data));
-    }, [addressForm.province]);
+        if (addressForm.province.code) {
+            fetchLocation(
+                `https://psgc.gitlab.io/api/provinces/${addressForm.province.code}/cities-municipalities/`,
+                setCitiesMunicipalities,
+            );
+        }
+    }, [addressForm.province.code]);
 
     useEffect(() => {
-        fetch(
-            `https://psgc.gitlab.io/api/cities-municipalities/${addressForm.cityMunicipality}/barangays/`,
-        )
-            .then((response) => response.json())
-            .then((data) => setBarangays(data));
-    }, [addressForm.cityMunicipality]);
+        if (addressForm.cityMunicipality.code) {
+            fetchLocation(
+                `https://psgc.gitlab.io/api/cities-municipalities/${addressForm.cityMunicipality.code}/barangays/`,
+                setBarangays,
+            );
+        }
+    }, [addressForm.cityMunicipality.code]);
 
     function handleChange(e) {
-        const key = e.target.id;
-        const value = e.target.value;
+        const { id, value } = e.target;
 
-        setAddressForm((prev) => ({
-            ...prev,
-            [key]: value,
-        }));
+        if (id === "region") {
+            const selected = regions.find((region) => region.code === value);
+
+            console.log(selected);
+
+            setAddressForm((prev) => ({
+                ...prev,
+                region: { code: value, name: selected?.name || "" },
+                province: { code: "", name: "" },
+                cityMunicipality: { code: "", name: "" },
+                barangay: { code: "", name: "" },
+            }));
+        }
+
+        if (id === "province") {
+            const selected = provinces.find(
+                (province) => province.code === value,
+            );
+
+            setAddressForm((prev) => ({
+                ...prev,
+                province: { code: value, name: selected?.name || "" },
+                cityMunicipality: { code: "", name: "" },
+                barangay: { code: "", name: "" },
+            }));
+        }
+
+        if (id === "cityMunicipality") {
+            const selected = citiesMunicipalities.find(
+                (cityMunicipality) => cityMunicipality.code === value,
+            );
+
+            setAddressForm((prev) => ({
+                ...prev,
+                cityMunicipality: { code: value, name: selected?.name || "" },
+                barangay: { code: "", name: "" },
+            }));
+        }
+
+        if (id === "barangay") {
+            const selected = barangays.find(
+                (barangay) => barangay.code === value,
+            );
+
+            setAddressForm((prev) => ({
+                ...prev,
+                barangay: { code: value, name: selected?.name || "" },
+            }));
+        }
     }
 
     function handleSubmit(e) {
         e.preventDefault();
 
-        const selectedRegion = regions.find(
-            (r) => r.code === addressForm.region,
-        )?.name;
-        const selectedProvince = provinces.find(
-            (p) => p.code === addressForm.province,
-        )?.name;
-        const selectedCity = citiesMunicipalities.find(
-            (c) => c.code === addressForm.cityMunicipality,
-        )?.name;
-        const selectedBarangay = barangays.find(
-            (b) => b.code === addressForm.barangay,
-        )?.name;
-
         const submissionData = {
             ...addressForm,
-            region: selectedRegion,
-            province: selectedProvince,
-            cityMunicipality: selectedCity,
-            barangay: selectedBarangay,
+            region: addressForm.region.name,
+            province: addressForm.province.name,
+            cityMunicipality: addressForm.cityMunicipality.name,
+            barangay: addressForm.barangay.name,
         };
 
         console.log("Submitting:", submissionData);
@@ -111,8 +153,7 @@ function Create() {
                             name=""
                             id="region"
                             className="w-full rounded-md border border-gray-400 p-3"
-                            data-id={addressForm.region}
-                            value={addressForm.region}
+                            value={addressForm.region.code}
                             onChange={handleChange}
                         >
                             <option value="default">-- Select Region --</option>
@@ -137,7 +178,7 @@ function Create() {
                             name=""
                             id="province"
                             className="w-full rounded-md border border-gray-400 p-3"
-                            value={addressForm.province}
+                            value={addressForm.province.code}
                             onChange={handleChange}
                         >
                             <option value="default">
@@ -164,7 +205,7 @@ function Create() {
                             name=""
                             id="cityMunicipality"
                             className="w-full rounded-md border border-gray-400 p-3"
-                            value={addressForm.cityMunicipality}
+                            value={addressForm.cityMunicipality.code}
                             onChange={handleChange}
                         >
                             <option value="default">
@@ -191,7 +232,7 @@ function Create() {
                             name=""
                             id="barangay"
                             className="w-full rounded-md border border-gray-400 p-3"
-                            value={addressForm.barangay}
+                            value={addressForm.barangay.code}
                             onChange={handleChange}
                         >
                             <option value="default">
