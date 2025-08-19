@@ -33,7 +33,7 @@ Route::get('/cart', function () {
 
 Route::get('/account', function () {
     return Inertia::render('Account/Orders/Index');
-})->name('account.order.index');
+})->name('account.orders.index');
 
 Route::get('/account/details', function () {
     return Inertia::render('Account/Details/Index');
