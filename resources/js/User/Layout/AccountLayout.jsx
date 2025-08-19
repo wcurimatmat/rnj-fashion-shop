@@ -78,7 +78,7 @@ function AccountLayout({ children }) {
                     <ul className="grid gap-6 text-lg">
                         <li>
                             <Link
-                                href={route("account.order.index")}
+                                href={route("account.orders.index")}
                                 className={
                                     component.startsWith("Account/Orders")
                                         ? "text-rose-400"
