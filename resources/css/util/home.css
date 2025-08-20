@@ -1,7 +1,3 @@
-@mixin background(color, image) {
-    background-image: color, image;
-}
-
 @utility hero-background {
     --hero-image: url("/resources/js/Assets/visuals/pexels-migsr87-8051256.jpg");
 
