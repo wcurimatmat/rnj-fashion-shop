@@ -1,4 +1,4 @@
-import AccountLayout from "@User/Layout/AccountLayout";
+import AccountLayout from "@layouts/Users/AccountLayout";
 import { MapPinCheck, MapPinMinus, MapPinPlus, SquarePen } from "lucide-react";
 import { Link } from "@inertiajs/react";
 

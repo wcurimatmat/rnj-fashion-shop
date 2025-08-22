@@ -1,4 +1,4 @@
-import PropositionVisual from "@Assets/visuals/pexels-daroon-19087201.jpg";
+import PropositionVisual from "@assets/visuals/pexels-daroon-19087201.jpg";
 
 function Proposition() {
     return (

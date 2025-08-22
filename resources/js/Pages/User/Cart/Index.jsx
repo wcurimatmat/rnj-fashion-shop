@@ -1,6 +1,6 @@
-import UserLayout from "@User/Layout/UserLayout";
+import UserLayout from "@layouts/Users/UserLayout";
 import { Trash2, ShoppingCart } from "lucide-react";
-import CartVisual from "@Assets/visuals/item-6.jpg";
+import CartVisual from "@assets/visuals/item-6.jpg";
 
 function Index() {
     return (

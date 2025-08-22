@@ -1,5 +1,5 @@
-import Header from "@User/Components/Header/Header";
-import Footer from "@User/Components/Footer/Footer";
+import Header from "@components/Users/Header/Header";
+import Footer from "@components/Users/Footer/Footer";
 
 function UserLayout({ children }) {
     return (

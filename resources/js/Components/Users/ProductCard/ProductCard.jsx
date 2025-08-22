@@ -1,4 +1,4 @@
-import ItemImage from "@Assets/visuals/item-6.jpg";
+import ItemImage from "@assets/visuals/item-6.jpg";
 import { ShoppingBag } from "lucide-react";
 
 function ProductCard() {

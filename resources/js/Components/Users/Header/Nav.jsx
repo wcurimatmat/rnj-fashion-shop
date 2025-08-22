@@ -1,4 +1,4 @@
-import NavItems from "@User/Utils/NavItems";
+import NavItems from "@utils/Users/NavItems";
 
 function Nav({ navState }) {
     return (
@@ -7,7 +7,7 @@ function Nav({ navState }) {
         >
             <div className="rounded-sm bg-rose-200 px-12 md:bg-transparent">
                 <ul className="flex flex-col divide-y md:flex-row md:gap-8 md:divide-none">
-                    {NavItems.pages.map(function ({name, url}, index) {
+                    {NavItems.pages.map(function ({ name, url }, index) {
                         return (
                             <li key={index} className="py-4">
                                 <a

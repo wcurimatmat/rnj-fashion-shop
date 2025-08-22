@@ -1,5 +1,5 @@
-import UserLayout from "@User/Layout/UserLayout";
-import AccountVisual from "@Assets/visuals/pexels-soldiervip-1391498.jpg";
+import UserLayout from "@layouts/Users/UserLayout";
+import AccountVisual from "@assets/visuals/pexels-soldiervip-1391498.jpg";
 import { Menu } from "lucide-react";
 import { Link, usePage } from "@inertiajs/react";
 import { useState } from "react";

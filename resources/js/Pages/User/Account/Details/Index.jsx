@@ -1,4 +1,4 @@
-import AccountLayout from "@User/Layout/AccountLayout";
+import AccountLayout from "@layouts/Users/AccountLayout";
 
 function Index() {
     return (

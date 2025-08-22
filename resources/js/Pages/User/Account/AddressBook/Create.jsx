@@ -1,4 +1,4 @@
-import AccountLayout from "@User/Layout/AccountLayout";
+import AccountLayout from "@layouts/Users/AccountLayout";
 import { Link } from "@inertiajs/react";
 import { useState, useEffect } from "react";
 

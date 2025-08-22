@@ -1,4 +1,4 @@
-import AccountLayout from "@User/Layout/AccountLayout";
+import AccountLayout from "@layouts/Users/AccountLayout";
 import { Check } from "lucide-react";
 
 function Index() {
@@ -11,7 +11,7 @@ function Index() {
             </section>
 
             <section>
-                <ul className="grid gap-4 max-w-lg">
+                <ul className="grid max-w-lg gap-4">
                     <li className="overflow-hidden rounded-md border border-rose-200">
                         <div className="flex flex-col gap-3">
                             <div className="flex items-center justify-between bg-rose-100 p-4">

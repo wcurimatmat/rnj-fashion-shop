@@ -1,4 +1,4 @@
-import UserLayout from "@User/Layout/UserLayout";
+import UserLayout from "@layouts/Users/UserLayout";
 import { DynamicIcon } from "lucide-react/dynamic";
 import { useState } from "react";
 

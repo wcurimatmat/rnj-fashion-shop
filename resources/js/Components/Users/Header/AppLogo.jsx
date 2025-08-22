@@ -1,4 +1,4 @@
-import Logo from "@Assets/logo/logo.png";
+import Logo from "@assets/logo/logo.png";
 
 function AppLogo() {
     return (

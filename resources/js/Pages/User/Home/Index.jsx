@@ -1,4 +1,4 @@
-import UserLayout from "@User/Layout/UserLayout";
+import UserLayout from "@layouts/Users/UserLayout";
 
 import Hero from "./Hero";
 import Features from "./Features";

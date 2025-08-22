@@ -1,6 +1,6 @@
-import UserLayout from "@User/Layout/UserLayout";
-import ProductViewVisual from "@Assets/visuals/item-6.jpg";
-import availableSizes from "@User/Utils/AvailableSizes";
+import UserLayout from "@layouts/Users/UserLayout";
+import ProductViewVisual from "@assets/visuals/item-6.jpg";
+import availableSizes from "@utils/Users/AvailableSizes";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 

@@ -1,4 +1,4 @@
-import ProductCard from "@User/Components/ProductCard/ProductCard";
+import ProductCard from "@components/Users/ProductCard/ProductCard";
 
 function Features() {
     return (

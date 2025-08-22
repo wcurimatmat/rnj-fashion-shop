@@ -1,4 +1,4 @@
-import NavItems from "@User/Utils/NavItems";
+import NavItems from "@utils/Users/NavItems";
 
 function RenderFooterNavColumn({ title, links }) {
     return (

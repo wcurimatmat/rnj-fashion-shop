@@ -1,5 +1,5 @@
-import UserLayout from "@User/Layout/UserLayout";
-import AboutUsVisual from "@Assets/visuals/pexels-liza-summer-6347546.jpg";
+import UserLayout from "@layouts/Users/UserLayout";
+import AboutUsVisual from "@assets/visuals/pexels-liza-summer-6347546.jpg";
 
 function Index() {
     return (
