@@ -1,6 +1,14 @@
 import AccountLayout from "@layouts/Users/AccountLayout";
 import { Link } from "@inertiajs/react";
 import { useState, useEffect } from "react";
+import SelectLocation from "@/Components/Users/SelectLocation/SelectLocation";
+import {
+    Select,
+    SelectTrigger,
+    SelectValue,
+    SelectContent,
+    SelectItem,
+} from "@/Shadcn/components/ui/select";
 
 function Create() {
     const [regions, setRegions] = useState([]);
@@ -57,9 +65,7 @@ function Create() {
         }
     }, [addressForm.cityMunicipality.code]);
 
-    function handleChange(e) {
-        const { id, value } = e.target;
-
+    function handleChange(id, value) {
         if (id === "region") {
             const selected = regions.find((region) => region.code === value);
 
@@ -149,106 +155,44 @@ function Create() {
             <section>
                 <form onSubmit={handleSubmit} className="grid max-w-lg gap-4">
                     {/* Region */}
-                    <div className="flex flex-col gap-2">
-                        <label
-                            htmlFor="region"
-                            className="text-sm font-bold text-gray-500 uppercase"
-                        >
-                            Region
-                        </label>
-                        <select
-                            name=""
-                            id="region"
-                            className="w-full rounded-md border border-gray-400 p-3"
-                            value={addressForm.region.code}
-                            onChange={handleChange}
-                        >
-                            <option value="">-- Select Region --</option>
-                            {regions.map((region) => (
-                                <option
-                                    key={region.code}
-                                    value={region.code}
-                                >{`${region.regionName} - ${region.name}`}</option>
-                            ))}
-                        </select>
-                    </div>
+                    <SelectLocation
+                        locations={regions}
+                        onChangeValue={handleChange}
+                        placeholder="Select Region"
+                        id="region"
+                        label="Region"
+                        value={addressForm.region.code}
+                    />
 
                     {/* Province */}
-                    <div className="flex flex-col gap-2">
-                        <label
-                            htmlFor="province"
-                            className="text-sm font-bold text-gray-500 uppercase"
-                        >
-                            Province
-                        </label>
-                        <select
-                            name=""
-                            id="province"
-                            className="w-full rounded-md border border-gray-400 p-3"
-                            value={addressForm.province.code}
-                            onChange={handleChange}
-                        >
-                            <option value="">-- Select Province --</option>
-                            {provinces.map((province) => (
-                                <option
-                                    key={province.code}
-                                    value={province.code}
-                                >{`${province.name}`}</option>
-                            ))}
-                        </select>
-                    </div>
+                    <SelectLocation
+                        locations={provinces}
+                        onChangeValue={handleChange}
+                        placeholder="Select Province"
+                        id="province"
+                        label="Province"
+                        value={addressForm.province.code}
+                    />
 
                     {/* City/Municipality */}
-                    <div className="flex flex-col gap-2">
-                        <label
-                            htmlFor="cityMunicipality"
-                            className="text-sm font-bold text-gray-500 uppercase"
-                        >
-                            City/Municipality
-                        </label>
-                        <select
-                            name=""
-                            id="cityMunicipality"
-                            className="w-full rounded-md border border-gray-400 p-3"
-                            value={addressForm.cityMunicipality.code}
-                            onChange={handleChange}
-                        >
-                            <option value="">
-                                -- Select City/Municipality --
-                            </option>
-                            {citiesMunicipalities.map((cityMunicipality) => (
-                                <option
-                                    key={cityMunicipality.code}
-                                    value={cityMunicipality.code}
-                                >{`${cityMunicipality.name}`}</option>
-                            ))}
-                        </select>
-                    </div>
+                    <SelectLocation
+                        locations={citiesMunicipalities}
+                        onChangeValue={handleChange}
+                        placeholder="Select City/Municipality"
+                        id="cityMunicipality"
+                        label="City/Municipality"
+                        value={addressForm.cityMunicipality.code}
+                    />
 
                     {/* Barangay */}
-                    <div className="flex flex-col gap-2">
-                        <label
-                            htmlFor="region"
-                            className="text-sm font-bold text-gray-500 uppercase"
-                        >
-                            Barangay
-                        </label>
-                        <select
-                            name=""
-                            id="barangay"
-                            className="w-full rounded-md border border-gray-400 p-3"
-                            value={addressForm.barangay.code}
-                            onChange={handleChange}
-                        >
-                            <option value="">-- Select Barangay --</option>
-                            {barangays.map((barangay) => (
-                                <option
-                                    key={barangay.code}
-                                    value={barangay.code}
-                                >{`${barangay.name}`}</option>
-                            ))}
-                        </select>
-                    </div>
+                    <SelectLocation
+                        locations={barangays}
+                        onChangeValue={handleChange}
+                        placeholder="Select Barangay"
+                        id="barangay"
+                        label="Barangay"
+                        value={addressForm.barangay.code}
+                    />
 
                     {/* Address Line 1 */}
                     <div className="flex flex-col gap-2">
