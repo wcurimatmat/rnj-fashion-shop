@@ -1,3 +1,5 @@
+import { Button } from "@/Shadcn/components/ui/button";
+
 function Hero() {
     return (
         <section className="hero-background rounded-lg py-36 font-bold text-gray-100 lg:py-56">
@@ -5,12 +7,13 @@ function Hero() {
                 <h1 className="font-quattrocento text-2xl md:text-4xl lg:text-5xl">
                     Fashion That Fits You Perfectly
                 </h1>
-                <a
-                    href="#"
-                    className="m-auto w-max rounded-sm border-2 border-rose-200 px-8 py-4"
+
+                <Button
+                    asChild
+                    className="text-md m-auto w-max bg-rose-300 p-6 hover:bg-rose-400 md:text-lg"
                 >
-                    Explore Collection
-                </a>
+                    <a href="#">Explore Collection</a>
+                </Button>
             </div>
         </section>
     );
