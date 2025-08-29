@@ -7,7 +7,7 @@
         "config": "",
         "css": "resources/css/app.css",
         "baseColor": "zinc",
-        "cssVariables": true,
+        "cssVariables": false,
         "prefix": ""
     },
     "iconLibrary": "lucide",
