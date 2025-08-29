@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import SelectLocation from "@/Components/Users/SelectLocation/SelectLocation";
 import { Label } from "@/Shadcn/components/ui/label";
 import { Input } from "@/Shadcn/components/ui/input";
+import { Button } from "@/Shadcn/components/ui/button";
 
 function Create() {
     const [regions, setRegions] = useState([]);
@@ -121,15 +122,15 @@ function Create() {
         if (id === "addressLine1") {
             setAddressForm((prev) => ({
                 ...prev,
-                addressLine1: value
-            }))
+                addressLine1: value,
+            }));
         }
 
         if (id === "addressLine2") {
             setAddressForm((prev) => ({
                 ...prev,
-                addressLine2: value
-            }))
+                addressLine2: value,
+            }));
         }
     }
 
@@ -217,7 +218,9 @@ function Create() {
                             placeholder="House number, street name"
                             className="py-5"
                             value={addressForm.addressLine1}
-                            onChange={(e) => handleChange("addressLine1", e.target.value)}
+                            onChange={(e) =>
+                                handleChange("addressLine1", e.target.value)
+                            }
                         />
                     </div>
                     {/* Address Line 2 */}
@@ -234,15 +237,17 @@ function Create() {
                             placeholder="Addition address information"
                             className="py-5"
                             value={addressForm.addressLine2}
-                            onChange={(e) => handleChange("addressLine2", e.target.value)}
+                            onChange={(e) =>
+                                handleChange("addressLine2", e.target.value)
+                            }
                         />
                     </div>
-                    <button
+                    <Button
                         type="submit"
-                        className="cursor-pointer rounded-md bg-rose-300 py-3 text-lg font-bold transition duration-200 ease-in-out hover:bg-rose-200"
+                        className="bg-rose-300 py-6 text-base font-bold hover:bg-rose-200"
                     >
                         Save Address
-                    </button>
+                    </Button>
                 </form>
             </section>
         </AccountLayout>
