@@ -1,6 +1,7 @@
 import AccountLayout from "@layouts/Users/AccountLayout";
 import { MapPinCheck, MapPinMinus, MapPinPlus, SquarePen } from "lucide-react";
 import { Link } from "@inertiajs/react";
+import { Button } from "@/Shadcn/components/ui/button";
 
 function Index() {
     return (
@@ -120,13 +121,12 @@ function Index() {
                     </ul>
                 </section>
                 <section>
-                    <Link
-                        href={route("account.address-book.create")}
-                        className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-rose-300 py-5 font-bold transition-colors duration-200 ease-in-out hover:bg-rose-200 active:bg-rose-200"
-                    >
-                        <MapPinPlus size={20} />
-                        <p>Add Address</p>
-                    </Link>
+                    <Button asChild className="w-full py-8 bg-rose-300 hover:bg-rose-400">
+                        <Link href={route("account.address-book.create")}>
+                            <MapPinPlus className="size-5" />
+                            <span className="text-base font-bold">Add Address</span>
+                        </Link>
+                    </Button>
                 </section>
             </div>
         </AccountLayout>
