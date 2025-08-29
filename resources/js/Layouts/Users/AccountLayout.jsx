@@ -32,7 +32,7 @@ function AccountLayout({ children }) {
                             <Link
                                 href={route("account.orders.index")}
                                 className={
-                                    component.startsWith("Account/Orders")
+                                    component.startsWith("User/Account/Orders")
                                         ? "text-rose-400"
                                         : ""
                                 }
@@ -44,7 +44,7 @@ function AccountLayout({ children }) {
                             <Link
                                 href={route("account.details.index")}
                                 className={
-                                    component.startsWith("Account/Details")
+                                    component.startsWith("User/Account/Details")
                                         ? "text-rose-400"
                                         : ""
                                 }
@@ -56,7 +56,7 @@ function AccountLayout({ children }) {
                             <Link
                                 href={route("account.address-book.index")}
                                 className={
-                                    component.startsWith("Account/AddressBook")
+                                    component.startsWith("User/Account/AddressBook")
                                         ? "text-rose-400"
                                         : ""
                                 }
