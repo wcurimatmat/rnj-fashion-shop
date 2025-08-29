@@ -22,7 +22,7 @@ function Index() {
 
                 <div className="grid gap-6 min-[925px]:gap-12">
                     <div className="">
-                        <h1 className="font-quattrocento mb-2 text-2xl font-bold min-[925px]:text-4xl">
+                        <h1 className="font-quattrocento mb-2 text-2xl font-bold min-[925px]:text-3xl">
                             Lorem ipsum dolor sit amet.
                         </h1>
                         <p>₱150.00</p>
