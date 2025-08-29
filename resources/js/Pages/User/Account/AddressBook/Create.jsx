@@ -2,13 +2,8 @@ import AccountLayout from "@layouts/Users/AccountLayout";
 import { Link } from "@inertiajs/react";
 import { useState, useEffect } from "react";
 import SelectLocation from "@/Components/Users/SelectLocation/SelectLocation";
-import {
-    Select,
-    SelectTrigger,
-    SelectValue,
-    SelectContent,
-    SelectItem,
-} from "@/Shadcn/components/ui/select";
+import { Label } from "@/Shadcn/components/ui/label";
+import { Input } from "@/Shadcn/components/ui/input";
 
 function Create() {
     const [regions, setRegions] = useState([]);
@@ -122,6 +117,20 @@ function Create() {
                 barangay: { code: value, name: selected?.name || "" },
             }));
         }
+
+        if (id === "addressLine1") {
+            setAddressForm((prev) => ({
+                ...prev,
+                addressLine1: value
+            }))
+        }
+
+        if (id === "addressLine2") {
+            setAddressForm((prev) => ({
+                ...prev,
+                addressLine2: value
+            }))
+        }
     }
 
     function handleSubmit(e) {
@@ -196,34 +205,36 @@ function Create() {
 
                     {/* Address Line 1 */}
                     <div className="flex flex-col gap-2">
-                        <label
-                            htmlFor="address_line_1"
-                            className="text-sm font-bold text-gray-500 uppercase"
+                        <Label
+                            htmlFor="addressLine1"
+                            className="text-base font-bold text-gray-500"
                         >
                             Address Line 1
-                        </label>
-                        <input
+                        </Label>
+                        <Input
                             type="text"
-                            name=""
-                            id="address_line_1"
-                            placeholder="House Number, Street Name"
-                            className="w-full rounded-md border border-gray-400 p-3"
+                            id="addressLine1"
+                            placeholder="House number, street name"
+                            className="py-5"
+                            value={addressForm.addressLine1}
+                            onChange={(e) => handleChange("addressLine1", e.target.value)}
                         />
                     </div>
                     {/* Address Line 2 */}
                     <div className="flex flex-col gap-2">
-                        <label
-                            htmlFor="address_line_2"
-                            className="text-sm font-bold text-gray-500 uppercase"
+                        <Label
+                            htmlFor="addressLine2"
+                            className="text-base font-bold text-gray-500"
                         >
                             Address Line 2
-                        </label>
-                        <input
+                        </Label>
+                        <Input
                             type="text"
-                            name=""
-                            id="address_line_2"
-                            placeholder="Addition Address Information"
-                            className="w-full rounded-md border border-gray-400 p-3"
+                            id="addressLine2"
+                            placeholder="Addition address information"
+                            className="py-5"
+                            value={addressForm.addressLine2}
+                            onChange={(e) => handleChange("addressLine2", e.target.value)}
                         />
                     </div>
                     <button
