@@ -3,6 +3,10 @@ import ProductViewVisual from "@assets/visuals/item-6.jpg";
 import availableSizes from "@utils/Users/AvailableSizes";
 import ProductAccordion from "./ProductAccordion";
 import { Button } from "@/Shadcn/components/ui/button";
+import {
+    ToggleGroup,
+    ToggleGroupItem,
+} from "@/Shadcn/components/ui/toggle-group";
 
 function Index() {
     return (
@@ -25,31 +29,37 @@ function Index() {
                     </div>
 
                     <div className="">
-                        <p className="mb-2 text-sm font-bold text-gray-500 uppercase">
+                        <p className="mb-2 text-base font-bold text-gray-600">
                             Size:
                         </p>
 
                         <ul className="flex flex-wrap gap-2">
-                            {availableSizes.map((size, index) => (
-                                <li key={index}>
-                                    <button className="w-14 cursor-pointer rounded-md border-2 border-rose-300 py-4">
-                                        {size}
-                                    </button>
-                                </li>
-                            ))}
+                            <ToggleGroup
+                                variant="outline"
+                                type="multiple"
+                                size="lg"
+                            >
+                                {availableSizes.map(function (size, index) {
+                                    return (
+                                        <ToggleGroupItem value={size}>
+                                            {size}
+                                        </ToggleGroupItem>
+                                    );
+                                })}
+                            </ToggleGroup>
                         </ul>
                     </div>
 
                     <form action="" className="grid gap-4 font-bold">
                         <Button
                             type="submit"
-                            className="bg-rose-300 py-6 text-gray-800 hover:bg-rose-400 font-bold text-base"
+                            className="bg-rose-300 py-6 text-base font-bold text-gray-800 hover:bg-rose-400"
                         >
                             Checkout
                         </Button>
                         <Button
                             type="submit"
-                            className="py-6 font-bold text-base"
+                            className="py-6 text-base font-bold"
                             variant="outline"
                         >
                             Add To Bag
