@@ -1,7 +1,7 @@
 import UserLayout from "@layouts/Users/UserLayout";
 import ProductViewVisual from "@assets/visuals/item-6.jpg";
 import availableSizes from "@utils/Users/AvailableSizes";
-import { ChevronDown } from "lucide-react";
+import ProductAccordion from "./ProductAccordion";
 import { useState } from "react";
 
 function Index() {
@@ -67,57 +67,7 @@ function Index() {
                         </button>
                     </form>
 
-                    <div className="divide-y divide-gray-300 border border-x-0 border-gray-300">
-                        <div className="py-3">
-                            <button
-                                className="flex w-full items-center justify-between py-2 text-xl font-bold text-gray-500"
-                                onClick={() => handleDropdownState(0)}
-                            >
-                                <p>Features & Description</p>
-                                <ChevronDown
-                                    size={20}
-                                    className={`${dropdownState[0] ? "rotate-180" : ""} transition duration-200 ease-in-out`}
-                                />
-                            </button>
-
-                            <div
-                                className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-                                    dropdownState[0] ? "max-h-40" : "max-h-0"
-                                }`}
-                            >
-                                <div className="leading-7">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Facilis praesentium
-                                    quibusdam aperiam, enim ea minus.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="py-3">
-                            <button
-                                className="flex w-full items-center justify-between py-2 text-xl font-bold text-gray-500"
-                                onClick={() => handleDropdownState(1)}
-                            >
-                                <p>Delivery & Returns</p>
-                                <ChevronDown
-                                    size={20}
-                                    className={`${dropdownState[1] ? "rotate-180" : ""} transition duration-200 ease-in-out`}
-                                />
-                            </button>
-
-                            <div
-                                className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-                                    dropdownState[1] ? "max-h-40" : "max-h-0"
-                                }`}
-                            >
-                                <div className="leading-7">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Facilis praesentium
-                                    quibusdam aperiam, enim ea minus.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ProductAccordion />
                 </div>
             </section>
 
