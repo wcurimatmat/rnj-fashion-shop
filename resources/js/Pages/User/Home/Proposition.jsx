@@ -30,7 +30,7 @@ function Proposition() {
                 </Button>
             </article>
 
-            <figure className="m-auto aspect-square w-full overflow-hidden rounded-md shadow-xl/30 shadow-rose-400 md:max-w-md">
+            <figure className="m-auto aspect-square w-full overflow-hidden rounded-md shadow-xl/30 shadow-rose-400 md:w-md">
                 <img
                     src={PropositionVisual}
                     alt=""
