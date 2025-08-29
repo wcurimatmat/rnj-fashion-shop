@@ -1,4 +1,5 @@
 import PropositionVisual from "@assets/visuals/pexels-daroon-19087201.jpg";
+import { Button } from "@/Shadcn/components/ui/button";
 
 function Proposition() {
     return (
@@ -21,12 +22,12 @@ function Proposition() {
                     </p>
                 </div>
 
-                <a
-                    href=""
-                    className="rounded-sm bg-rose-300 px-8 py-4 font-bold shadow-xl/30 shadow-rose-400 transition duration-200 ease-in-out hover:bg-rose-200"
+                <Button
+                    asChild
+                    className="bg-rose-300 p-6 text-base font-bold hover:bg-rose-400"
                 >
-                    Explore Collections
-                </a>
+                    <a href="#">Explore Collections</a>
+                </Button>
             </article>
 
             <figure className="m-auto aspect-square w-full overflow-hidden rounded-md shadow-xl/30 shadow-rose-400 md:max-w-md">
