@@ -2,21 +2,8 @@ import UserLayout from "@layouts/Users/UserLayout";
 import ProductViewVisual from "@assets/visuals/item-6.jpg";
 import availableSizes from "@utils/Users/AvailableSizes";
 import ProductAccordion from "./ProductAccordion";
-import { useState } from "react";
 
 function Index() {
-    const [dropdownState, setDropdownState] = useState({
-        0: true,
-        1: false,
-    });
-
-    function handleDropdownState(index) {
-        setDropdownState((prev) => ({
-            ...prev,
-            [index]: !prev[index],
-        }));
-    }
-
     return (
         <UserLayout>
             <section className="grid gap-8 min-[925px]:m-auto min-[925px]:flex min-[925px]:max-w-5xl min-[925px]:items-start min-[925px]:gap-20">
