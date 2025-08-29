@@ -21,15 +21,13 @@ function ProductCard() {
             </div>
 
             <form action="">
-                <button
+                <Button
                     type="submit"
-                    className="w-full cursor-pointer rounded-md bg-rose-400 p-4 text-white hover:bg-rose-300"
+                    className="w-full cursor-pointer rounded-md bg-rose-300 p-6 text-white hover:bg-rose-400"
                 >
-                    <div className="flex items-center justify-center gap-2">
-                        <ShoppingBag size={20} />
-                        <span className="text-base font-bold">Add To Bag</span>
-                    </div>
-                </button>
+                    <ShoppingBag className="size-5" />
+                    <span className="text-base">Add To Bag</span>
+                </Button>
             </form>
         </div>
     );
