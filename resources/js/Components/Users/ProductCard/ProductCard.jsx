@@ -25,7 +25,7 @@ function ProductCard() {
                     type="submit"
                     className="w-full cursor-pointer rounded-md bg-rose-300 p-6 text-white hover:bg-rose-400"
                 >
-                    <ShoppingBag className="size-5" />
+                    <ShoppingBag className="size-5" strokeWidth={1.5} />
                     <span className="text-base">Add To Bag</span>
                 </Button>
             </form>
