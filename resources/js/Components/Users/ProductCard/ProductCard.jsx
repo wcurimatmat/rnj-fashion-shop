@@ -1,5 +1,6 @@
 import ItemImage from "@assets/visuals/item-6.jpg";
 import { ShoppingBag } from "lucide-react";
+import { Button } from "@/Shadcn/components/ui/button";
 
 function ProductCard() {
     return (
@@ -20,9 +21,14 @@ function ProductCard() {
             </div>
 
             <form action="">
-                <button className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-rose-400 px-4 py-2 text-white hover:bg-rose-300">
-                    <ShoppingBag size={24} />
-                    <p className="text-lg font-bold">Add To Bag</p>
+                <button
+                    type="submit"
+                    className="w-full cursor-pointer rounded-md bg-rose-400 p-4 text-white hover:bg-rose-300"
+                >
+                    <div className="flex items-center justify-center gap-2">
+                        <ShoppingBag size={20} />
+                        <span className="text-base font-bold">Add To Bag</span>
+                    </div>
                 </button>
             </form>
         </div>
