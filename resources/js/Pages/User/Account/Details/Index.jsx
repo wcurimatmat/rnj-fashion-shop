@@ -1,4 +1,7 @@
 import AccountLayout from "@layouts/Users/AccountLayout";
+import { Label } from "@/Shadcn/components/ui/label";
+import { Input } from "@/Shadcn/components/ui/input";
+import { Button } from "@/Shadcn/components/ui/button";
 
 function Index() {
     return (
@@ -27,60 +30,60 @@ function Index() {
 
                         <div className="flex-1">
                             <form action="" className="grid gap-4 lg:gap-6">
-                                <div className="flex flex-col gap-1">
-                                    <label
-                                        htmlFor=""
-                                        className="text-sm font-bold text-gray-600 uppercase"
+                                <div className="grid gap-1">
+                                    <Label
+                                        htmlFor="firstName"
+                                        className="text-base font-bold text-gray-600"
                                     >
                                         First Name
-                                    </label>
-                                    <input
+                                    </Label>
+
+                                    <Input
                                         type="text"
-                                        name=""
-                                        id=""
-                                        placeholder="First Name"
-                                        className="rounded-md border border-gray-400 p-3 focus:border-rose-400"
+                                        id="firstName"
+                                        placeholder="Enter first name"
+                                        className="py-6"
                                     />
                                 </div>
 
-                                <div className="flex flex-col gap-1">
-                                    <label
-                                        htmlFor=""
-                                        className="text-sm font-bold text-gray-600 uppercase"
+                                <div className="grid gap-1">
+                                    <Label
+                                        htmlFor="lastName"
+                                        className="text-base font-bold text-gray-600"
                                     >
                                         Last Name
-                                    </label>
-                                    <input
+                                    </Label>
+
+                                    <Input
                                         type="text"
-                                        name=""
-                                        id=""
-                                        placeholder="Last Name"
-                                        className="rounded-md border border-gray-400 p-3 focus:border-rose-400"
+                                        id="lastName"
+                                        placeholder="Enter last name"
+                                        className="py-6"
                                     />
                                 </div>
 
-                                <div className="flex flex-col gap-1">
-                                    <label
-                                        htmlFor=""
-                                        className="text-sm font-bold text-gray-600 uppercase"
+                                <div className="grid gap-1">
+                                    <Label
+                                        htmlFor="phoneNumber"
+                                        className="text-base font-bold text-gray-600"
                                     >
                                         Phone Number
-                                    </label>
-                                    <input
+                                    </Label>
+
+                                    <Input
                                         type="tel"
-                                        name=""
-                                        id=""
-                                        placeholder="Phone Number"
-                                        className="rounded-md border border-gray-400 p-3 focus:border-rose-400"
+                                        id="phoneNumber"
+                                        placeholder="Enter phone number"
+                                        className="py-6"
                                     />
                                 </div>
 
-                                <button
+                                <Button
                                     type="submit"
-                                    className="cursor-pointer rounded-md bg-rose-300 py-3 text-lg font-bold transition duration-200 ease-in-out hover:bg-rose-200"
+                                    className="bg-rose-300 py-6 text-base font-bold text-gray-800 hover:bg-rose-400"
                                 >
                                     Save Personal Information
-                                </button>
+                                </Button>
                             </form>
                         </div>
                     </div>
@@ -101,28 +104,28 @@ function Index() {
 
                         <div className="flex-1">
                             <form action="" className="grid gap-3 lg:gap-6">
-                                <div className="flex flex-col gap-1">
-                                    <label
-                                        htmlFor=""
-                                        className="text-sm font-bold text-gray-600 uppercase"
+                                <div className="grid gap-1">
+                                    <Label
+                                        htmlFor="emailAddress"
+                                        className="text-base font-bold text-gray-600"
                                     >
                                         E-mail Address
-                                    </label>
-                                    <input
+                                    </Label>
+
+                                    <Input
                                         type="tel"
-                                        name=""
-                                        id=""
-                                        placeholder="E-mail Address"
-                                        className="rounded-md border border-gray-400 p-3 focus:border-rose-400"
+                                        id="emailAddress"
+                                        placeholder="Enter e-mail address"
+                                        className="py-6"
                                     />
                                 </div>
 
-                                <button
+                                <Button
                                     type="submit"
-                                    className="cursor-pointer rounded-md bg-rose-300 py-3 text-lg font-bold transition duration-200 ease-in-out hover:bg-rose-200"
+                                    className="bg-rose-300 py-6 text-base font-bold text-gray-800 hover:bg-rose-400"
                                 >
                                     Save E-mail Address
-                                </button>
+                                </Button>
                             </form>
                         </div>
                     </div>
@@ -143,44 +146,44 @@ function Index() {
 
                         <div className="flex-1">
                             <form action="" className="grid gap-3 lg:gap-6">
-                                <div className="flex flex-col gap-1">
-                                    <label
-                                        htmlFor=""
-                                        className="text-sm font-bold text-gray-600 uppercase"
+                                <div className="grid gap-1">
+                                    <Label
+                                        htmlFor="password"
+                                        className="text-base font-bold text-gray-600"
                                     >
                                         Password
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        name=""
-                                        id=""
-                                        placeholder="Password"
-                                        className="rounded-md border border-gray-400 p-3 focus:border-rose-400"
+                                    </Label>
+
+                                    <Input
+                                        type="password"
+                                        id="password"
+                                        placeholder="Enter password"
+                                        className="py-6"
                                     />
                                 </div>
 
-                                <div className="flex flex-col gap-1">
-                                    <label
-                                        htmlFor=""
-                                        className="text-sm font-bold text-gray-600 uppercase"
+                                <div className="grid gap-1">
+                                    <Label
+                                        htmlFor="password"
+                                        className="text-base font-bold text-gray-600"
                                     >
-                                        Confirm Password
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        name=""
-                                        id=""
-                                        placeholder="Confirm Password"
-                                        className="rounded-md border border-gray-400 p-3 focus:border-rose-400"
+                                        Password
+                                    </Label>
+
+                                    <Input
+                                        type="password"
+                                        id="confirmPassword"
+                                        placeholder="Confirm password"
+                                        className="py-6"
                                     />
                                 </div>
 
-                                <button
+                                <Button
                                     type="submit"
-                                    className="cursor-pointer rounded-md bg-rose-300 py-3 text-lg font-bold transition duration-200 ease-in-out hover:bg-rose-200"
+                                    className="bg-rose-300 py-6 text-base font-bold text-gray-800 hover:bg-rose-400"
                                 >
                                     Save Password
-                                </button>
+                                </Button>
                             </form>
                         </div>
                     </div>
