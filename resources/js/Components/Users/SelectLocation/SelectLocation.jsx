@@ -44,6 +44,7 @@ function SelectLocation({
                 id="region"
                 value={value || ""}
                 onValueChange={(value) => onChangeValue(id, value)}
+                disabled={id !== "region" && locations.length === 0}
             >
                 <SelectTrigger className="mt-2 w-full py-5">
                     <SelectValue placeholder={placeholder} />
