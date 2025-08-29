@@ -121,10 +121,15 @@ function Index() {
                     </ul>
                 </section>
                 <section>
-                    <Button asChild className="w-full py-8 bg-rose-300 hover:bg-rose-400">
+                    <Button
+                        asChild
+                        className="w-full bg-rose-300 py-8 text-gray-800 hover:bg-rose-400"
+                    >
                         <Link href={route("account.address-book.create")}>
                             <MapPinPlus className="size-5" />
-                            <span className="text-base font-bold">Add Address</span>
+                            <span className="text-base font-bold">
+                                Add Address
+                            </span>
                         </Link>
                     </Button>
                 </section>
