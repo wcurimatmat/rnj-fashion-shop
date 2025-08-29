@@ -36,7 +36,7 @@ function Index() {
                         <ul className="flex flex-wrap gap-2">
                             <ToggleGroup
                                 variant="outline"
-                                type="multiple"
+                                type="single"
                                 size="lg"
                             >
                                 {availableSizes.map(function (size, index) {
