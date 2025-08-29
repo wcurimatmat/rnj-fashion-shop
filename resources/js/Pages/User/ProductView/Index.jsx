@@ -2,6 +2,7 @@ import UserLayout from "@layouts/Users/UserLayout";
 import ProductViewVisual from "@assets/visuals/item-6.jpg";
 import availableSizes from "@utils/Users/AvailableSizes";
 import ProductAccordion from "./ProductAccordion";
+import { Button } from "@/Shadcn/components/ui/button";
 
 function Index() {
     return (
@@ -40,18 +41,19 @@ function Index() {
                     </div>
 
                     <form action="" className="grid gap-4 font-bold">
-                        <button
+                        <Button
                             type="submit"
-                            className="rounded-md bg-rose-300 py-4"
+                            className="bg-rose-300 py-6 text-gray-800 hover:bg-rose-400 font-bold text-base"
                         >
                             Checkout
-                        </button>
-                        <button
+                        </Button>
+                        <Button
                             type="submit"
-                            className="rounded-md border-2 border-rose-300 py-4"
+                            className="py-6 font-bold text-base"
+                            variant="outline"
                         >
                             Add To Bag
-                        </button>
+                        </Button>
                     </form>
 
                     <ProductAccordion />
