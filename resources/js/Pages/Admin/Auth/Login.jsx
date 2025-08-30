@@ -42,7 +42,7 @@ function Login() {
 
                     <Button
                         type="submit"
-                        className="bg-rose-300 py-5 text-base font-bold hover:bg-rose-400"
+                        className="bg-rose-300 py-5 text-base font-bold text-gray-800 hover:bg-rose-400"
                     >
                         Sign In
                     </Button>
