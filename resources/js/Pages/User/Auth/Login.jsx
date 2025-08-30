@@ -1,7 +1,7 @@
 import UserLayout from "@layouts/Users/UserLayout";
 import { DynamicIcon } from "lucide-react/dynamic";
 import { useState } from "react";
-import FieldControl from "@/Components/Users/FieldControl/FieldControl";
+import FieldControl from "@/Components/Shared/FieldControl/FieldControl";
 import { Input } from "@/Shadcn/components/ui/input";
 import { Button } from "@/Shadcn/components/ui/button";
 
