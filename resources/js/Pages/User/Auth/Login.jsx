@@ -1,9 +1,12 @@
 import UserLayout from "@layouts/Users/UserLayout";
 import { DynamicIcon } from "lucide-react/dynamic";
 import { useState } from "react";
+import FieldControl from "@/Components/Users/FieldControl/FieldControl";
+import { Input } from "@/Shadcn/components/ui/input";
+import { Button } from "@/Shadcn/components/ui/button";
 
 function Login() {
-    const [passwordState, setPasswordState] = useState(false);
+    const [isRevealed, setIsRevealed] = useState(false);
 
     return (
         <UserLayout>
@@ -17,59 +20,60 @@ function Login() {
 
                 <section>
                     <form action="" className="grid gap-6">
-                        <div className="flex flex-col gap-2">
-                            <label htmlFor="">Email</label>
-                            <input
+                        {/* Email Field */}
+                        <FieldControl id="emailAddress" label="E-mail Address">
+                            <Input
                                 type="text"
-                                name=""
-                                id=""
-                                placeholder="E-mail"
-                                className="rounded-md border border-gray-300 p-4 outline-transparent focus:border-rose-300"
+                                id="emailAddress"
+                                placeholder="Enter e-mail address"
+                                className="py-5"
                             />
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <label htmlFor="">Password</label>
-                            <div className="relative flex items-center">
-                                <input
-                                    type={`${passwordState ? "text" : "password"}`}
-                                    name=""
-                                    id=""
-                                    placeholder="Password"
-                                    className="w-full rounded-md border border-gray-300 p-4 pr-12 outline-transparent focus:border-rose-300"
+                        </FieldControl>
+
+                        <FieldControl id="password" label="Password">
+                            <div className="flex gap-2">
+                                <Input
+                                    type={isRevealed ? "text" : "password"}
+                                    id="password"
+                                    placeholder="Enter password"
+                                    className="py-5"
                                 />
-                                <button
-                                    className="absolute right-4"
+                                <Button
                                     type="button"
-                                    onClick={() =>
-                                        setPasswordState(!passwordState)
-                                    }
+                                    className="h-full"
+                                    variant="outline"
+                                    onClick={() => setIsRevealed(!isRevealed)}
                                 >
                                     <DynamicIcon
-                                        name={`${passwordState ? "eye-closed" : "eye"}`}
-                                        size={24}
-                                        className="text-gray-500"
+                                        name={`${isRevealed ? "eye-closed" : "eye"}`}
+                                        className="size-4"
                                     />
-                                </button>
+                                </Button>
                             </div>
-                        </div>
-                        <button
+                        </FieldControl>
+
+                        <Button
                             type="submit"
-                            className="cursor-pointer rounded-md bg-rose-300 p-4 text-lg font-bold transition-colors duration-200 ease-in-out hover:bg-rose-200"
+                            className="bg-rose-300 py-6 text-base font-bold text-gray-800 hover:bg-rose-400"
                         >
-                            Login
-                        </button>
+                            Sign In
+                        </Button>
                     </form>
                 </section>
 
                 <section>
                     <p className="text-center">
                         Don't have an account?{" "}
-                        <a
-                            href=""
-                            className="font-bold text-rose-400 hover:text-rose-300"
+                        <Button
+                            variant="link"
+                            className="font-bold"
+                            size="sm"
+                            asChild
                         >
-                            Sign Up
-                        </a>
+                            <a href="" className="text-rose-400">
+                                Sign Up
+                            </a>
+                        </Button>
                     </p>
                 </section>
             </div>
