@@ -1,9 +1,13 @@
 import UserLayout from "@layouts/Users/UserLayout";
 import { DynamicIcon } from "lucide-react/dynamic";
 import { useState } from "react";
+import FieldControl from "@/Components/Users/FieldControl/FieldControl";
+import { Input } from "@/Shadcn/components/ui/input";
+import { Button } from "@/Shadcn/components/ui/button";
+import { Link } from "@inertiajs/react";
 
 function Register() {
-    const [passwordFieldState, setPasswordFieldState] = useState(false);
+    const [isRevealed, setIsRevealed] = useState(false);
 
     return (
         <UserLayout>
@@ -17,81 +21,84 @@ function Register() {
 
                 <section>
                     <form action="" className="grid gap-6">
-                        <div className="flex flex-col gap-2">
-                            <label htmlFor="">First Name</label>
-                            <input
+                        {/* First name */}
+                        <FieldControl id="firstName" label="First Name">
+                            <Input
                                 type="text"
-                                name=""
-                                id=""
-                                placeholder="First Name"
-                                className="rounded-md border border-gray-300 p-4 outline-transparent focus:border-rose-300"
+                                id="firstName"
+                                placeholder="Enter first name"
+                                className="py-5"
                             />
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <label htmlFor="">Last Name</label>
-                            <input
+                        </FieldControl>
+
+                        {/* Last name */}
+                        <FieldControl id="lastName" label="Last Name">
+                            <Input
                                 type="text"
-                                name=""
-                                id=""
-                                placeholder="Last Name"
-                                className="rounded-md border border-gray-300 p-4 outline-transparent focus:border-rose-300"
+                                id="lastName"
+                                placeholder="Enter last name"
+                                className="py-5"
                             />
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <label htmlFor="">Email</label>
-                            <input
-                                type="text"
-                                name=""
-                                id=""
-                                placeholder="E-mail"
-                                className="rounded-md border border-gray-300 p-4 outline-transparent focus:border-rose-300"
+                        </FieldControl>
+
+                        {/* E-mail address */}
+                        <FieldControl id="emailAddress" label="E-mail Address">
+                            <Input
+                                type="email"
+                                id="emailAddress"
+                                placeholder="Enter e-mail address"
+                                className="py-5"
                             />
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <label htmlFor="">Password</label>
-                            <div className="relative flex items-center">
-                                <input
-                                    type={`${passwordFieldState ? "text" : "password"}`}
-                                    name=""
-                                    id=""
-                                    placeholder="Password"
-                                    className="w-full rounded-md border border-gray-300 p-4 pr-12 outline-transparent focus:border-rose-300"
+                        </FieldControl>
+
+                        {/* Password */}
+                        <FieldControl id="password" label="Password">
+                            <div className="flex gap-2">
+                                <Input
+                                    type={isRevealed ? "text" : "password"}
+                                    id="password"
+                                    placeholder="Enter password"
+                                    className="py-5"
                                 />
-                                <button
-                                    className="absolute right-4"
+                                <Button
                                     type="button"
-                                    onClick={() =>
-                                        setPasswordFieldState(
-                                            !passwordFieldState,
-                                        )
-                                    }
+                                    className="h-full"
+                                    variant="outline"
+                                    onClick={() => setIsRevealed(!isRevealed)}
                                 >
                                     <DynamicIcon
-                                        name={`${passwordFieldState ? "eye-closed" : "eye"}`}
-                                        size={24}
-                                        className="text-gray-500"
+                                        name={`${isRevealed ? "eye-closed" : "eye"}`}
+                                        className="size-4"
                                     />
-                                </button>
+                                </Button>
                             </div>
-                        </div>
-                        <button
+                        </FieldControl>
+
+                        <Button
                             type="submit"
-                            className="cursor-pointer rounded-md bg-rose-300 p-4 text-lg font-bold transition-colors duration-200 ease-in-out hover:bg-rose-200"
+                            className="bg-rose-300 py-6 text-base font-bold text-gray-800 hover:bg-rose-400"
                         >
-                            Create Account
-                        </button>
+                            Register Account
+                        </Button>
                     </form>
                 </section>
 
                 <section>
                     <p className="text-center">
                         Already have an account?{" "}
-                        <a
-                            href={route("login")}
-                            className="font-bold text-rose-400 hover:text-rose-300"
+                        <Button
+                            variant="link"
+                            className="font-bold"
+                            size="sm"
+                            asChild
                         >
-                            Login
-                        </a>
+                            <Link
+                                href={route("login")}
+                                className="text-rose-400"
+                            >
+                                Sign In
+                            </Link>
+                        </Button>
                     </p>
                 </section>
             </div>
