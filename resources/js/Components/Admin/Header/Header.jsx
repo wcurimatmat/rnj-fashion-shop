@@ -6,7 +6,7 @@ import SidebarDrawer from "../SidebarDrawer/SidebarDrawer";
 function Header() {
     return (
         <header>
-            <div className="flex items-center justify-between py-3">
+            <div className="flex items-center justify-between">
                 <SidebarDrawer />
                 <Dropdown />
             </div>
