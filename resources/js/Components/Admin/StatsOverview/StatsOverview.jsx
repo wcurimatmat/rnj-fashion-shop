@@ -8,7 +8,7 @@ import {
 
 function StatsOverview() {
     return (
-        <Card className="flex-1 bg-linear-to-t from-gray-100 to-gray-50">
+        <Card className="bg-linear-to-t from-gray-100 to-gray-50">
             <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                     <span className="text-gray-500">Total Revenue</span>
