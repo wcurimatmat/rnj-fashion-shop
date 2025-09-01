@@ -30,16 +30,14 @@ function OrderTable() {
                     <Table className="">
                         <TableHeader className="sticky top-0 bg-white">
                             <TableRow>
-                                <TableHead className="w-[100px] font-bold">
+                                <TableHead className="lg:w-[100px]">
                                     Invoice
                                 </TableHead>
-                                <TableHead className="font-bold">
-                                    Status
-                                </TableHead>
-                                <TableHead className="font-bold">
+                                <TableHead className="">Status</TableHead>
+                                <TableHead className="hidden md:block">
                                     Method
                                 </TableHead>
-                                <TableHead className="text-right font-bold">
+                                <TableHead className="text-right">
                                     Amount
                                 </TableHead>
                             </TableRow>
@@ -47,13 +45,13 @@ function OrderTable() {
                         <TableBody className="w-full">
                             {invoices.map((invoice) => (
                                 <TableRow key={invoice.invoice}>
-                                    <TableCell className="font-medium">
+                                    <TableCell className="font-bold">
                                         {invoice.invoice}
                                     </TableCell>
-                                    <TableCell>
+                                    <TableCell className="">
                                         {invoice.paymentStatus}
                                     </TableCell>
-                                    <TableCell>
+                                    <TableCell className="hidden md:block">
                                         {invoice.paymentMethod}
                                     </TableCell>
                                     <TableCell className="text-right">
