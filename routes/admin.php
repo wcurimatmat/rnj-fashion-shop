@@ -12,3 +12,7 @@ Route::get('/login', function () {
 Route::get("/dashboard", function () {
     return Inertia::render('Admin/Dashboard/Index');
 });
+
+Route::get('/products', function () {
+    return Inertia::render('Admin/Products/Index');
+});
