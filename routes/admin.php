@@ -11,8 +11,8 @@ Route::get('/login', function () {
 
 Route::get("/dashboard", function () {
     return Inertia::render('Admin/Dashboard/Index');
-});
+})->name('dashboard.index');
 
 Route::get('/products', function () {
     return Inertia::render('Admin/Products/Index');
-});
+})->name('products.index');
