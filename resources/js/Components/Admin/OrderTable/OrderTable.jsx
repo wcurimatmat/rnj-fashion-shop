@@ -33,8 +33,8 @@ function OrderTable() {
                                 <TableHead className="lg:w-[100px]">
                                     Invoice
                                 </TableHead>
-                                <TableHead className="">Status</TableHead>
-                                <TableHead className="hidden md:block">
+                                <TableHead>Status</TableHead>
+                                <TableHead className="max-md:hidden">
                                     Method
                                 </TableHead>
                                 <TableHead className="text-right">
@@ -48,10 +48,10 @@ function OrderTable() {
                                     <TableCell className="font-bold">
                                         {invoice.invoice}
                                     </TableCell>
-                                    <TableCell className="">
+                                    <TableCell>
                                         {invoice.paymentStatus}
                                     </TableCell>
-                                    <TableCell className="hidden md:block">
+                                    <TableCell className="max-md:hidden">
                                         {invoice.paymentMethod}
                                     </TableCell>
                                     <TableCell className="text-right">
