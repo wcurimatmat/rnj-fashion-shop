@@ -12,23 +12,15 @@ function Index() {
                 </section>
 
                 <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                    {/* Overview */}
-                    {/* 1. Total Revenue
-                        2. Total Orders
-                        3. Total Users
-                        4. Total Items */}
-
                     <StatsOverview />
                     <StatsOverview />
                     <StatsOverview />
                     <StatsOverview />
                 </section>
                 <section>
-                    {/* Sales Chart */}
                     <SalesChart />
                 </section>
                 <section>
-                    {/* Orders */}
                     <OrderTable />
                 </section>
             </div>
