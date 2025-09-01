@@ -1,0 +1,9 @@
+@layer utilities {
+    .primary-button {
+        @apply bg-rose-300;
+
+        @variant hover {
+            @apply bg-rose-400;
+        }
+    }
+}
