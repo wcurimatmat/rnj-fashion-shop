@@ -45,7 +45,7 @@ function SalesChart() {
                 </CardDescription>
             </CardHeader>
             <CardContent>
-                <ChartContainer config={chartConfig} className="h-[250px] w-full">
+                <ChartContainer config={chartConfig} className="lg:h-[250px] lg:w-full">
                     <AreaChart
                         accessibilityLayer
                         data={chartData}
