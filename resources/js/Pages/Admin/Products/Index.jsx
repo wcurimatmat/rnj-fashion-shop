@@ -4,13 +4,14 @@ import { Link } from "@inertiajs/react";
 import AdminLayout from "@/Layouts/Admin/AdminLayout";
 import { Button } from "@/Shadcn/components/ui/button";
 import ProductCard from "@/Components/Admin/ProductCard/ProductCard";
+import Paginate from "@/Components/Shared/Paginate/Paginate";
 
 function Index() {
     return (
         <AdminLayout>
             <div className="space-y-8">
                 <section>
-                    <h1 className="text-2xl">Products</h1>
+                    <h1 className="text-2xl">Manage Products</h1>
                 </section>
 
                 <section>
@@ -31,7 +32,7 @@ function Index() {
                 </section>
 
                 <section>
-                    <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                    <ul className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
                         <li>
                             <ProductCard />
                         </li>
@@ -58,7 +59,7 @@ function Index() {
                         </li>
                     </ul>
 
-                    {/* Paginations */}
+                    <Paginate />
                 </section>
             </div>
         </AdminLayout>
