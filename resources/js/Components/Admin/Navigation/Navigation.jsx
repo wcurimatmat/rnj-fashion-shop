@@ -4,7 +4,7 @@ import { DynamicIcon } from "lucide-react/dynamic";
 
 const links = [
     { name: "Dashboard", url: "#", icon: "layout-dashboard" },
-    { name: "Dashboard", url: "#", icon: "layout-dashboard" },
+    { name: "Products", url: route("products.index"), icon: "box" },
     { name: "Dashboard", url: "#", icon: "layout-dashboard" },
     { name: "Dashboard", url: "#", icon: "layout-dashboard" },
 ];
