@@ -42,6 +42,7 @@ import {
     DropdownMenuTrigger,
 } from "@/Shadcn/components/ui/dropdown-menu";
 import Paginate from "@/Components/Shared/Paginate/Paginate";
+import StatsOverview from "@/Components/Admin/StatsOverview/StatsOverview";
 
 function Index() {
     const [sorting, setSorting] = useState([]);
@@ -61,64 +62,79 @@ function Index() {
         <AdminLayout>
             <PageHeader title="Manage Orders" />
 
-            <Card>
-                <CardHeader>
-                    <CardTitle className="flex items-center gap-1">
-                        <ShoppingBag className="size-4" />
-                        Orders
-                    </CardTitle>
-                    <CardDescription>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit.
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <ScrollArea className="h-[400px] rounded border">
-                        <Table className="table-fixed">
-                            <TableHeader className="">
-                                {table.getHeaderGroups().map((headerGroup) => (
-                                    <TableRow key={headerGroup.id}>
-                                        {headerGroup.headers.map((header) => (
-                                            <TableHead
-                                                className={`sticky top-0 bg-zinc-100 py-3 ${cn(header.column.columnDef.meta?.className)}`}
-                                                key={header.id}
-                                            >
-                                                {header.isPlaceholder
-                                                    ? null
-                                                    : flexRender(
-                                                          header.column
-                                                              .columnDef.header,
-                                                          header.getContext(),
-                                                      )}
-                                            </TableHead>
-                                        ))}
-                                    </TableRow>
-                                ))}
-                            </TableHeader>
-                            <TableBody className="pr-5">
-                                {table.getRowModel().rows.map((row) => (
-                                    <TableRow className="pr-5">
-                                        {row.getVisibleCells().map((cell) => (
-                                            <TableCell
-                                                className={`pr-5 ${cn(cell.column.columnDef.meta?.className)}`}
-                                            >
-                                                {flexRender(
-                                                    cell.column.columnDef.cell,
-                                                    cell.getContext(),
-                                                )}
-                                            </TableCell>
-                                        ))}
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </ScrollArea>
+            <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <StatsOverview />
+                <StatsOverview />
+            </section>
 
-                    <div className="mt-5">
-                        <Paginate />
-                    </div>
-                </CardContent>
-            </Card>
+            <section>
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-1">
+                            <ShoppingBag className="size-4" />
+                            Orders
+                        </CardTitle>
+                        <CardDescription>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit.
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                        <ScrollArea className="h-[400px] rounded border">
+                            <Table className="table-fixed">
+                                <TableHeader className="">
+                                    {table
+                                        .getHeaderGroups()
+                                        .map((headerGroup) => (
+                                            <TableRow key={headerGroup.id}>
+                                                {headerGroup.headers.map(
+                                                    (header) => (
+                                                        <TableHead
+                                                            className={`sticky top-0 bg-zinc-100 py-3 ${cn(header.column.columnDef.meta?.className)}`}
+                                                            key={header.id}
+                                                        >
+                                                            {header.isPlaceholder
+                                                                ? null
+                                                                : flexRender(
+                                                                      header
+                                                                          .column
+                                                                          .columnDef
+                                                                          .header,
+                                                                      header.getContext(),
+                                                                  )}
+                                                        </TableHead>
+                                                    ),
+                                                )}
+                                            </TableRow>
+                                        ))}
+                                </TableHeader>
+                                <TableBody className="pr-5">
+                                    {table.getRowModel().rows.map((row) => (
+                                        <TableRow className="pr-5">
+                                            {row
+                                                .getVisibleCells()
+                                                .map((cell) => (
+                                                    <TableCell
+                                                        className={`pr-5 ${cn(cell.column.columnDef.meta?.className)}`}
+                                                    >
+                                                        {flexRender(
+                                                            cell.column
+                                                                .columnDef.cell,
+                                                            cell.getContext(),
+                                                        )}
+                                                    </TableCell>
+                                                ))}
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </ScrollArea>
+                        <div className="mt-5">
+                            <Paginate />
+                        </div>
+                    </CardContent>
+                </Card>
+            </section>
         </AdminLayout>
     );
 }
