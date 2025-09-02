@@ -41,7 +41,7 @@ function DataTable({ columns, data }) {
                             <TableRow key={headerGroup.id}>
                                 {headerGroup.headers.map((header) => (
                                     <TableHead
-                                        className={`sticky top-0 bg-zinc-100 py-3 ${cn(header.column.columnDef.meta?.className)} px-4`}
+                                        className={`sticky top-0 bg-zinc-100 py-3 ${cn(header.column.columnDef.meta?.className)} px-4 font-bold`}
                                         key={header.id}
                                     >
                                         {header.isPlaceholder
@@ -62,7 +62,7 @@ function DataTable({ columns, data }) {
                                 {row.getVisibleCells().map((cell) => (
                                     <TableCell
                                         key={cell.id}
-                                        className={`pr-5 ${cn(cell.column.columnDef.meta?.className)} px-4`}
+                                        className={` ${cn(cell.column.columnDef.meta?.className)} px-4`}
                                     >
                                         {flexRender(
                                             cell.column.columnDef.cell,
