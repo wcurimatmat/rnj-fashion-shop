@@ -12,8 +12,8 @@ import { Link } from "@inertiajs/react";
 
 function ProducCard() {
     return (
-        <Card className="gap-3 rounded-md py-5">
-            <CardContent className="px-5">
+        <Card className="gap-3 rounded-md py-4">
+            <CardContent className="px-4">
                 <figure className="aspect-[3/4]">
                     <img
                         src={ProductCardVisual}
@@ -23,14 +23,14 @@ function ProducCard() {
                 </figure>
             </CardContent>
 
-            <CardHeader className="px-5">
+            <CardHeader className="px-4">
                 <CardTitle className="text-lg">Item 6</CardTitle>
                 <CardDescription>$1,250.00</CardDescription>
             </CardHeader>
 
-            <CardFooter className="px-5">
+            <CardFooter className="px-4">
                 <Button
-                    className="primary-button rounded w-full p-6 text-base font-bold text-gray-800"
+                    className="primary-button w-full rounded p-6 text-base font-bold text-gray-800"
                     asChild
                 >
                     <Link href="#">Edit Product</Link>
