@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/react";
-import { Box, ShoppingBag, LayoutDashboard } from "lucide-react";
+import { Box, ShoppingBag, LayoutDashboard, UsersRound } from "lucide-react";
 
 const links = [
     {
@@ -17,6 +17,11 @@ const links = [
         url: route("orders.index"),
         icon: <ShoppingBag strokeWidth={1.4} />,
     },
+    {
+        name: "Customers",
+        url: route("customers.index"),
+        icon: <UsersRound strokeWidth={1.4} />,
+    },
 ];
 
 function Navigation() {
@@ -33,10 +38,6 @@ function Navigation() {
                                 href={link.url}
                                 className="flex items-center gap-2 p-3"
                             >
-                                {/* <DynamicIcon
-                                    name={link.icon}
-                                    strokeWidth={1.4}
-                                /> */}
                                 {link.icon}
                                 <span className="text-base">{link.name}</span>
                             </Link>
