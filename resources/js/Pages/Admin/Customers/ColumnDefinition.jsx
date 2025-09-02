@@ -4,18 +4,22 @@ export const columnDefs = [
     {
         accessorKey: "id",
         header: () => "id",
+        meta: { className: "max-md:hidden" },
     },
     {
         accessorKey: "firstName",
         header: () => "First Name",
+        meta: { className: "max-lg:hidden" },
     },
     {
         accessorKey: "lastName",
         header: () => "Last Name",
+        meta: { className: "max-lg:hidden" },
     },
     {
         accessorKey: "email",
         header: () => "Email",
+        meta: { className: "w-64" },
     },
     {
         accessorKey: "createdAt",
@@ -25,6 +29,7 @@ export const columnDefs = [
 
             return date.toLocaleDateString();
         },
+        meta: { className: "max-lg: hidden" },
     },
     {
         id: "actions",
