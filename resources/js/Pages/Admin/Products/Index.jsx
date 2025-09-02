@@ -11,7 +11,9 @@ function Index() {
         <AdminLayout>
             <div className="space-y-8">
                 <section>
-                    <h1 className="text-2xl">Manage Products</h1>
+                    <h1 className="font-quattrocento text-2xl font-bold">
+                        Manage Products
+                    </h1>
                 </section>
 
                 <section>
