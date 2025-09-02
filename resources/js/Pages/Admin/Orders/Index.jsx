@@ -5,7 +5,13 @@ import AdminLayout from "@/Layouts/Admin/AdminLayout";
 import DataTable from "@/Components/Shared/DataTable/DataTable";
 import PageHeader from "@/Components/Admin/PageHeader/PageHeader";
 import StatsOverview from "@/Components/Admin/StatsOverview/StatsOverview";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/Shadcn/components/ui/card";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from "@/Shadcn/components/ui/card";
 
 import { columns } from "./Columns";
 
