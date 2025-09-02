@@ -58,9 +58,10 @@ function DataTable({ columns, data }) {
                     </TableHeader>
                     <TableBody className="pr-5">
                         {table.getRowModel().rows.map((row) => (
-                            <TableRow className="pr-5">
+                            <TableRow key={row.id} className="pr-5">
                                 {row.getVisibleCells().map((cell) => (
                                     <TableCell
+                                        key={cell.id}
                                         className={`pr-5 ${cn(cell.column.columnDef.meta?.className)} px-4`}
                                     >
                                         {flexRender(
