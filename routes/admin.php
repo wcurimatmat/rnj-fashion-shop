@@ -20,3 +20,7 @@ Route::get('/products', function () {
 Route::get('/orders', function () {
     return Inertia::render('Admin/Orders/Index');
 })->name('orders.index');
+
+Route::get('/customers', function () {
+    return Inertia::render('Admin/Customers/Index');
+})->name('customers.index');
