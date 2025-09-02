@@ -16,3 +16,7 @@ Route::get("/dashboard", function () {
 Route::get('/products', function () {
     return Inertia::render('Admin/Products/Index');
 })->name('products.index');
+
+Route::get('/orders', function () {
+    return Inertia::render('Admin/Orders/Index');
+})->name('orders.index');
