@@ -1,12 +1,22 @@
-import { LayoutDashboard } from "lucide-react";
 import { Link } from "@inertiajs/react";
-import { DynamicIcon } from "lucide-react/dynamic";
+import { Box, ShoppingBag, LayoutDashboard } from "lucide-react";
 
 const links = [
-    { name: "Dashboard", url: "#", icon: "layout-dashboard" },
-    { name: "Products", url: route("products.index"), icon: "box" },
-    { name: "Dashboard", url: "#", icon: "layout-dashboard" },
-    { name: "Dashboard", url: "#", icon: "layout-dashboard" },
+    {
+        name: "Dashboard",
+        url: route("dashboard.index"),
+        icon: <LayoutDashboard strokeWidth={1.4} />,
+    },
+    {
+        name: "Products",
+        url: route("products.index"),
+        icon: <Box strokeWidth={1.4} />,
+    },
+    {
+        name: "Orders",
+        url: route("orders.index"),
+        icon: <ShoppingBag strokeWidth={1.4} />,
+    },
 ];
 
 function Navigation() {
@@ -23,10 +33,11 @@ function Navigation() {
                                 href={link.url}
                                 className="flex items-center gap-2 p-3"
                             >
-                                <DynamicIcon
+                                {/* <DynamicIcon
                                     name={link.icon}
                                     strokeWidth={1.4}
-                                />
+                                /> */}
+                                {link.icon}
                                 <span className="text-base">{link.name}</span>
                             </Link>
                         </li>
