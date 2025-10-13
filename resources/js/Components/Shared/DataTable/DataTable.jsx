@@ -3,7 +3,6 @@ import { useState } from "react";
 import { cn } from "@/Shadcn/lib/utils";
 import { flexRender } from "@tanstack/react-table";
 import Paginate from "@/Components/Shared/Paginate/Paginate";
-import { ScrollArea } from "@/Shadcn/components/ui/scroll-area";
 import {
     getCoreRowModel,
     getSortedRowModel,
@@ -78,7 +77,7 @@ function DataTable({ columns, data }) {
                     </Table>
                 </div>
             </div>
-            
+
             <div className="mt-5">
                 <Paginate />
             </div>
