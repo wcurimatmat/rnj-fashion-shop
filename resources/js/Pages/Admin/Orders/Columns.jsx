@@ -17,7 +17,7 @@ export const columns = [
             return (
                 <Button
                     variant="ghost"
-                    className="cursor-pointer"
+                    className="cursor-pointer font-bold"
                     onClick={() =>
                         column.toggleSorting(column.getIsSorted() === "asc")
                     }
