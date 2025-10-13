@@ -34,47 +34,51 @@ function DataTable({ columns, data }) {
 
     return (
         <>
-            <ScrollArea className="h-[400px] rounded border">
-                <Table className="table-fixed">
-                    <TableHeader className="">
-                        {table.getHeaderGroups().map((headerGroup) => (
-                            <TableRow key={headerGroup.id}>
-                                {headerGroup.headers.map((header) => (
-                                    <TableHead
-                                        className={`sticky top-0 bg-zinc-100 py-3 ${cn(header.column.columnDef.meta?.className)} px-4 font-bold`}
-                                        key={header.id}
-                                    >
-                                        {header.isPlaceholder
-                                            ? null
-                                            : flexRender(
-                                                  header.column.columnDef
-                                                      .header,
-                                                  header.getContext(),
-                                              )}
-                                    </TableHead>
-                                ))}
-                            </TableRow>
-                        ))}
-                    </TableHeader>
-                    <TableBody className="pr-5">
-                        {table.getRowModel().rows.map((row) => (
-                            <TableRow key={row.id} className="pr-5">
-                                {row.getVisibleCells().map((cell) => (
-                                    <TableCell
-                                        key={cell.id}
-                                        className={` ${cn(cell.column.columnDef.meta?.className)} px-4`}
-                                    >
-                                        {flexRender(
-                                            cell.column.columnDef.cell,
-                                            cell.getContext(),
-                                        )}
-                                    </TableCell>
-                                ))}
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </ScrollArea>
+            <div className="flex h-[500px] w-full flex-col gap-4">
+                <div className="flex flex-2/3 flex-col overflow-hidden rounded-md border">
+                    <Table className="table-fixed">
+                        <TableHeader className="sticky top-0 z-10">
+                            {table.getHeaderGroups().map((headerGroup) => (
+                                <TableRow key={headerGroup.id}>
+                                    {headerGroup.headers.map((header) => (
+                                        <TableHead
+                                            className={`sticky top-0 bg-zinc-100 py-3 ${cn(header.column.columnDef.meta?.className)} px-4 font-bold`}
+                                            key={header.id}
+                                        >
+                                            {header.isPlaceholder
+                                                ? null
+                                                : flexRender(
+                                                      header.column.columnDef
+                                                          .header,
+                                                      header.getContext(),
+                                                  )}
+                                        </TableHead>
+                                    ))}
+                                </TableRow>
+                            ))}
+                        </TableHeader>
+
+                        <TableBody className="pr-5">
+                            {table.getRowModel().rows.map((row) => (
+                                <TableRow key={row.id} className="pr-5">
+                                    {row.getVisibleCells().map((cell) => (
+                                        <TableCell
+                                            key={cell.id}
+                                            className={` ${cn(cell.column.columnDef.meta?.className)} px-4`}
+                                        >
+                                            {flexRender(
+                                                cell.column.columnDef.cell,
+                                                cell.getContext(),
+                                            )}
+                                        </TableCell>
+                                    ))}
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </div>
+            </div>
+            
             <div className="mt-5">
                 <Paginate />
             </div>
