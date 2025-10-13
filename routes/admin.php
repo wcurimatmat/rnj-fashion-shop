@@ -24,3 +24,7 @@ Route::get('/orders', function () {
 Route::get('/customers', function () {
     return Inertia::render('Admin/Customers/Index');
 })->name('customers.index');
+
+Route::get("/settings", function () {
+    return Inertia::render("Admin/Settings/Index");
+})->name("settings.index");
