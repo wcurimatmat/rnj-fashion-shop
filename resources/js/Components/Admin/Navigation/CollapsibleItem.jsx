@@ -12,24 +12,24 @@ import { useState } from "react";
 const settingsSubMenu = [
     {
         name: "Administration",
-        url: "#",
+        url: route("settings.administration"),
     },
     {
         name: "Notifications",
-        url: "#",
+        url: route("settings.notification"),
     },
     {
         name: "Payment Methods",
-        url: "#",
+        url: route("settings.payments"),
     },
     {
-        name: "Shop",
-        url: "#",
+        name: "Store",
+        url: route("settings.store"),
     },
 
     {
         name: "Tax",
-        url: "#",
+        url: route("settings.tax"),
     },
 ];
 
