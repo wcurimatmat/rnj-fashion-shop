@@ -1,5 +1,13 @@
 import { Link } from "@inertiajs/react";
-import { Box, ShoppingBag, LayoutDashboard, UsersRound, Settings } from "lucide-react";
+import {
+    Box,
+    ShoppingBag,
+    LayoutDashboard,
+    UsersRound,
+    Settings,
+} from "lucide-react";
+
+import CollapsibleItem from "./CollapsibleItem";
 
 const links = [
     {
@@ -21,11 +29,6 @@ const links = [
         name: "Customers",
         url: route("customers.index"),
         icon: <UsersRound strokeWidth={1.4} />,
-    },
-    {
-        name: "Settings",
-        url: route("settings.index"),
-        icon: <Settings strokeWidth={1.4} />,
     },
 ];
 
@@ -49,6 +52,10 @@ function Navigation() {
                         </li>
                     );
                 })}
+
+                <li>
+                    <CollapsibleItem />
+                </li>
             </ul>
         </nav>
     );
