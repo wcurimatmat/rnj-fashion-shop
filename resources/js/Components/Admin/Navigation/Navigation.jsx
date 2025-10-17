@@ -4,7 +4,6 @@ import {
     ShoppingBag,
     LayoutDashboard,
     UsersRound,
-    Settings,
 } from "lucide-react";
 
 import CollapsibleItem from "./CollapsibleItem";
