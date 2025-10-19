@@ -1,3 +1,5 @@
+import { Button } from "@/Shadcn/components/ui/button";
+
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -10,11 +12,15 @@ function Dropdown() {
     return (
         <div className="md:flex md:w-full md:justify-end">
             <DropdownMenu>
-                <DropdownMenuTrigger>
-                    <div className=""></div>
-                    <p>Maria Llewelyn</p>
+                <DropdownMenuTrigger asChild>
+                    <Button variant="secondary" className="py-6 cursor-pointer">
+                        <div className="flex items-center gap-2">
+                            <div className="rounded-full bg-gray-300 p-4"></div>
+                            <p className="text-base">Maria Llewelyn</p>
+                        </div>
+                    </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent>
+                <DropdownMenuContent align="end">
                     <DropdownMenuItem>
                         <Settings />
                         Settings
