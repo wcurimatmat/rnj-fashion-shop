@@ -9,7 +9,7 @@ import {
 
 import { useState } from "react";
 
-function CollapsibleItem({ name, menu, icon: Icon }) {
+function CollapsibleItem({ name = "", menu = [], icon: Icon }) {
     const [isOpen, setIsOpen] = useState(true);
 
     return (
