@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "@inertiajs/react";
-import { Box, ShoppingBag, LayoutDashboard, UsersRound } from "lucide-react";
+import {
+    Box,
+    ShoppingBag,
+    LayoutDashboard,
+    UsersRound,
+    ChartNoAxesCombined,
+} from "lucide-react";
 
 const navigationIcons = {
     dashboard: <LayoutDashboard strokeWidth={1.4} />,
     products: <Box strokeWidth={1.4} />,
     orders: <ShoppingBag strokeWidth={1.4} />,
     customers: <UsersRound strokeWidth={1.4} />,
+    reports: <ChartNoAxesCombined strokeWidth={1.4} />,
 };
 
 const navigationItemLinks = [
@@ -29,6 +36,11 @@ const navigationItemLinks = [
         name: "Customers",
         url: route("customers.index"),
         icon: navigationIcons.customers,
+    },
+    {
+        name: "Reports & Analytics",
+        url: "#",
+        icon: navigationIcons.reports,
     },
 ];
 
