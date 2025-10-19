@@ -1,14 +1,10 @@
-import {
-    Box,
-    ChartNoAxesCombined,
-    LayoutDashboard,
-    Megaphone,
-    ShoppingBag,
-    UsersRound,
-} from "lucide-react";
+import { ChartNoAxesCombined, LayoutDashboard, Megaphone } from "lucide-react";
 
 import Settings from "./Settings";
 import NavigationLink from "./NavigationLink";
+import ProductsManagement from "./ProductsManagement";
+import OrdersManagement from "./OrdersManagement";
+import CustomersManagement from "./CustomersManagement";
 import ContentManagement from "./ContentManagement";
 
 const navigationRoutes = {
@@ -30,14 +26,28 @@ function Navigation() {
                         url={navigationRoutes.dashboard}
                     />
                 </li>
-                <li className="rounded-md hover:bg-gray-200">
-                    Products Management
+                <li>
+                    <ProductsManagement />
+                </li>
+                <li>
+                    <OrdersManagement />
+                </li>
+                <li>
+                    <CustomersManagement />
                 </li>
                 <li className="rounded-md hover:bg-gray-200">
-                    Orders Management
+                    <NavigationLink
+                        icon={ChartNoAxesCombined}
+                        name="Reports & Analytics"
+                        url={navigationRoutes.reportsAndAnalytics}
+                    />
                 </li>
                 <li className="rounded-md hover:bg-gray-200">
-                    Customers Management
+                    <NavigationLink
+                        icon={Megaphone}
+                        name="Promotions & Marketing"
+                        url={navigationRoutes.promotionsAndMarketing}
+                    />
                 </li>
                 <li>
                     <ContentManagement />
