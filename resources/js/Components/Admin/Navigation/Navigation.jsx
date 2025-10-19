@@ -18,7 +18,7 @@ const navigationRoutes = {
 function Navigation() {
     return (
         <nav>
-            <ul>
+            <ul className="space-y-3">
                 <li className="rounded-md hover:bg-gray-200">
                     <NavigationLink
                         icon={LayoutDashboard}
