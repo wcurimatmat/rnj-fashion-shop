@@ -15,7 +15,7 @@ const subMenu = [
 const ContentManagement = () => {
     return (
         <CollapsibleItem
-            name="Content Management"
+            name="Contents"
             menu={subMenu}
             icon={TableOfContents}
         />
