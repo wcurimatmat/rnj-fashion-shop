@@ -2,26 +2,33 @@ import React from "react";
 import { Link } from "@inertiajs/react";
 import { Box, ShoppingBag, LayoutDashboard, UsersRound } from "lucide-react";
 
+const navigationIcons = {
+    dashboard: <LayoutDashboard strokeWidth={1.4} />,
+    products: <Box strokeWidth={1.4} />,
+    orders: <ShoppingBag strokeWidth={1.4} />,
+    customers: <UsersRound strokeWidth={1.4} />,
+};
+
 const navigationItemLinks = [
     {
         name: "Dashboard",
         url: route("dashboard.index"),
-        icon: <LayoutDashboard strokeWidth={1.4} />,
+        icon: navigationIcons.dashboard,
     },
     {
         name: "Products",
         url: route("products.index"),
-        icon: <Box strokeWidth={1.4} />,
+        icon: navigationIcons.products,
     },
     {
         name: "Orders",
         url: route("orders.index"),
-        icon: <ShoppingBag strokeWidth={1.4} />,
+        icon: navigationIcons.orders,
     },
     {
         name: "Customers",
         url: route("customers.index"),
-        icon: <UsersRound strokeWidth={1.4} />,
+        icon: navigationIcons.customers,
     },
 ];
 
