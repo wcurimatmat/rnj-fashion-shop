@@ -1,4 +1,4 @@
-import { Settings, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import { Link } from "@inertiajs/react";
 import {
@@ -9,31 +9,7 @@ import {
 
 import { useState } from "react";
 
-const settingsSubMenu = [
-    {
-        name: "Administration",
-        url: route("settings.administration"),
-    },
-    {
-        name: "Notifications",
-        url: route("settings.notification"),
-    },
-    {
-        name: "Payment Methods",
-        url: route("settings.payments"),
-    },
-    {
-        name: "Store",
-        url: route("settings.store"),
-    },
-
-    {
-        name: "Tax",
-        url: route("settings.tax"),
-    },
-];
-
-function CollapsibleItem() {
+function CollapsibleItem({ name, menu, icon: Icon }) {
     const [isOpen, setIsOpen] = useState(true);
 
     return (
@@ -45,8 +21,8 @@ function CollapsibleItem() {
             >
                 <div className="flex items-center justify-between">
                     <div className="flex w-full justify-start gap-2">
-                        <Settings strokeWidth={1.4} className="size-6" />
-                        <div className="text-base">Settings</div>
+                        <Icon strokeWidth={1.4} className="size-6" />
+                        <div className="text-base">{name}</div>
                     </div>
 
                     <ChevronRight
@@ -59,7 +35,7 @@ function CollapsibleItem() {
             <CollapsibleContent>
                 <nav className="ml-6 border-l pl-5">
                     <ul className="space-y-4">
-                        {settingsSubMenu.map((link) => (
+                        {menu.map((link) => (
                             <li key={link.name}>
                                 <Link href={link.url}>{link.name}</Link>
                             </li>
