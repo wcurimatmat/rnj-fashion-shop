@@ -4,11 +4,11 @@ import { Box } from "lucide-react";
 const subMenu = [
     {
         name: "Product List",
-        url: "#",
+        url: route("products.index"),
     },
     {
         name: "Categories & Collections",
-        url: "#",
+        url: route("categories-and-collections.index"),
     },
 ];
 
