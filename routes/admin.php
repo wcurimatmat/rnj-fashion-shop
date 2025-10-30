@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoryCollectionController;
+use App\Http\Controllers\ProductController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
@@ -13,9 +15,11 @@ Route::get("/dashboard", function () {
     return Inertia::render('Admin/Dashboard/Index');
 })->name('dashboard.index');
 
-Route::get('/products', function () {
-    return Inertia::render('Admin/Products/Index');
-})->name('products.index');
+// Products
+
+Route::resource('products', ProductController::class);
+
+Route::resource("categories-and-collections", CategoryCollectionController::class);
 
 Route::get('/orders', function () {
     return Inertia::render('Admin/Orders/Index');
