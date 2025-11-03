@@ -3,12 +3,12 @@ import PageHeader from "@/Components/Admin/PageHeader/PageHeader";
 
 function Notifications() {
     return (
-        <AdminLayout>
-            <div className="space-y-8">
-                <PageHeader title="Notifications" />
-            </div>
-        </AdminLayout>
+        <div className="space-y-8">
+            <PageHeader title="Notifications" />
+        </div>
     );
 }
+
+Notifications.layout = (page) => <AdminLayout children={page} />;
 
 export default Notifications;

@@ -3,12 +3,12 @@ import PageHeader from "@/Components/Admin/PageHeader/PageHeader";
 
 function Administration() {
     return (
-        <AdminLayout>
-            <div className="space-y-8">
-                <PageHeader title="Administration" />
-            </div>
-        </AdminLayout>
+        <div className="space-y-8">
+            <PageHeader title="Administration" />
+        </div>
     );
 }
+
+Administration.layout = (page) => <AdminLayout children={page} />;
 
 export default Administration;
