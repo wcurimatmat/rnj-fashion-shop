@@ -13,10 +13,12 @@ function CollapsibleItem({ name = "", menu = [], icon: Icon }) {
     const [isOpen, setIsOpen] = useState(true);
 
     return (
-        <Collapsible defaultOpen={true}>
+        <Collapsible
+            open={isOpen}
+            onOpenChange={setIsOpen}
+        >
             <CollapsibleTrigger
                 className="cursor-pointer rounded-md p-3 py-3 hover:bg-gray-200"
-                onClick={() => setIsOpen(!isOpen)}
                 asChild
             >
                 <div className="flex items-center justify-between">
