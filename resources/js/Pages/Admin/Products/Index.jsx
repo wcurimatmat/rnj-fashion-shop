@@ -25,7 +25,7 @@ function Index() {
                             className="primary-button p-6 text-base"
                             asChild
                         >
-                            <Link>
+                            <Link href={route("products.create")}>
                                 <Plus className="size-5" />
                                 <span>Add Product</span>
                             </Link>
