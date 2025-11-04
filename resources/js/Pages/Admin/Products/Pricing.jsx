@@ -54,7 +54,10 @@ const Pricing = () => {
                         </Field>
 
                         <Field className="flex-1" orientation="horizontal">
-                            <FieldLabel htmlFor="is_discounted">
+                            <FieldLabel
+                                htmlFor="is_discounted"
+                                className="text-sm font-bold text-gray-500"
+                            >
                                 Apply Discount
                             </FieldLabel>
                             <Switch id="is_discounted" />
