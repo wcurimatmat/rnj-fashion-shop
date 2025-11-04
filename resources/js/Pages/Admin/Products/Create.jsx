@@ -4,6 +4,7 @@ import PageHeader from "@/Components/Admin/PageHeader/PageHeader";
 import ImageUpload from "./ImageUpload";
 import Sizing from "./Sizing";
 import Category from "./Category";
+import Pricing from "./Pricing";
 
 import {
     Card,
@@ -63,6 +64,8 @@ const Create = () => {
                             </div>
                         </CardContent>
                     </Card>
+
+                    <Pricing />
                 </section>
 
                 <section className="space-y-6">
