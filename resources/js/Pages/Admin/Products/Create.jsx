@@ -17,11 +17,27 @@ import { Field, FieldLabel, FieldGroup } from "@/Shadcn/components/ui/field";
 
 import { Input } from "@/Shadcn/components/ui/input";
 import { Textarea } from "@/Shadcn/components/ui/textarea";
+import { Button } from "@/Shadcn/components/ui/button";
 
 const Create = () => {
     return (
         <>
-            <PageHeader title="Add New Product" />
+            <header className="flex items-center justify-between">
+                <PageHeader title="Add New Product" />
+
+                <div className="space-x-6">
+                    <Button
+                        variant="secondary"
+                        size="lg"
+                        className="cursor-pointer"
+                    >
+                        Discard
+                    </Button>
+                    <Button className="primary-button cursor-pointer" size="lg">
+                        Save Product
+                    </Button>
+                </div>
+            </header>
 
             <div className="grid grid-cols-3 gap-6">
                 <section className="col-span-2 space-y-6">
